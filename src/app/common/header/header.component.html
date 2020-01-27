@@ -1,5 +1,7 @@
-<!--<mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #drawer class="sidenav" fixedInViewport
+<mat-sidenav-container class="sidenav-container">
+  <!--fixedInViewport-->
+    <mat-sidenav #drawer
+        class="sidenav"
         [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
         [mode]="(isHandset$ | async) ? 'over' : 'side'"
         [opened]="(isHandset$ | async) === false">
@@ -23,22 +25,24 @@
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
         <div>Alira</div>
-        <div>
-            <span>Home</span>
-            <span>Patners</span>
-            <span>Pricing</span>
-            <span>Blog</span>
-            <span>Contact</span>
+        <div *ngIf="!(isHandset$ | async)">
+          <span><a routerLink="/">Home</a></span>
+          <span><a routerLink="/patners">Patners</a></span>
+          <span><a routerLink="/pricing">Pricing</a></span>
+          <span><a routerLink="/blog">Blog</a></span>
+          <span><a routerLink="/contact">Contact</a></span>
         </div>
         <div>
             <button mat-raised-button>Get Started</button>
             <button mat-button>Login</button>
         </div>
       </mat-toolbar>
-       Add Content Here
+       <!--Add Content Here-->
     </mat-sidenav-content>
-  </mat-sidenav-container>-->
-  <mat-toolbar class="navbar" color=primary>
+  </mat-sidenav-container>
+  <!--
+    NON-RESPONSIVE NAV BAR - going to delete 
+    <mat-toolbar class="navbar" color=primary>
     <div>Alira</div>
     <div>
         <span><a routerLink="/">Home</a></span>
@@ -51,4 +55,4 @@
         <button mat-raised-button>Get Started</button>
         <button mat-button>Login</button>
     </div>
-</mat-toolbar>
+</mat-toolbar>-->

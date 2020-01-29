@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './patners.component.html',
   styleUrls: ['./patners.component.scss']
 })
-export class PatnersComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class PatnersComponent {
+  
 
 }
+

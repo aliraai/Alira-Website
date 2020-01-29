@@ -5,11 +5,11 @@
     </span>
 
     <div fxShow="true" fxHide.lt-md="true">
-      <a href="#" mat-button>Home</a>
-      <a href="#" mat-button>Patners</a>
-      <a href="#" mat-button>Pricing</a>
-      <a href="#" mat-button>Blog</a>
-      <a href="#" mat-button>Contact</a>
+      <a routerLink="/" mat-button>Home</a>
+      <a routerLink="/patners" mat-button>Patners</a>
+      <a routerLink="/pricing" mat-button>Pricing</a>
+      <a routerLink="/blog" mat-button>Blog</a>
+      <a routerLink="/contact" mat-button>Contact</a>
     </div>
 
     <div fxShow="true" fxHide.lt-md="true">
@@ -27,12 +27,14 @@
   <mat-sidenav-container fxFlexFill class="example-container">
     <mat-sidenav #sidenav fxLayout="column">
       <div fxLayout="column">
-        <a (click)="sidenav.toggle()" href="#" mat-button>Close</a>
-        <a href="#" mat-button>Home</a>
-        <a href="#" mat-button>Patners</a>
-        <a href="#" mat-button>Pricing</a>
-        <a href="#" mat-button>Blog</a>
-        <a href="#" mat-button>Contact</a>
+        <!--<button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
+        </button>-->
+        <a routerLink="/" mat-button>Home</a>
+        <a routerLink="/patners" mat-button>Patners</a>
+        <a routerLink="/pricing" mat-button>Pricing</a>
+        <a routerLink="/blog" mat-button>Blog</a>
+        <a routerLink="/contact" mat-button>Contact</a>
       </div>
       <div>
         <button mat-raised-button class="btn">Get Started</button>

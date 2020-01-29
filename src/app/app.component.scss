@@ -1,12 +1,4 @@
 @font-face {
     font-family: 'futuraLight';
-    src: url("src/assets/fonts/FuturaPTLight.otf");
+    src: url("../assets/fonts/FuturaPTLight.otf");
 }
-.footer{
-    margin-top: 6%;
-}
-@media(max-width:700px){
-    .footer{
-        margin-top: 15%;
-    }
-  }

@@ -6,9 +6,13 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 const material=[
   MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule,
-  MatGridListModule,MatCardModule
+  MatGridListModule,MatCardModule,MatFormFieldModule,MatSelectModule,MatInputModule,MatButtonToggleModule
 ];
 
 @NgModule({

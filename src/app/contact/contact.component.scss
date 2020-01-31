@@ -1,22 +1,44 @@
 /*[fxFlex]{
     border:1px solid red;
 }*/
-.address{
+.icons{
+    margin-left:-5%;
+}
+.icon{
+    padding-left:5%;
+}
+.title1{
+    margin-left: 10%;;
+}
+.title{
+    text-align: center;
+}
+.contact-form{
+    padding:0% 10%;
+}    
+.btn{
+    width:20%;
+    margin-left:40%;
+}
+.container{
+    padding-left: 10%;
+    padding-top:2%;
+}
+.social{
+    padding:0% 5%;
+}
+.mat-display-2{
+    padding-bottom:0%;
+}
+/*----------------------------------------*/
+.header-contact{
+    padding-top: 5%;;
+    background-color: #57f;
+    width:100%;
+    height:auto;
+    color:white;
+}
+address{
+    text-align: justify;
     margin-left:10%;
-    margin-top:-15%;
-}
-.phone{
-    margin-left:-43%;
-}
-.no{
-    margin-left:-15%;
-    margin-top:-24%;
-}
-.email{
-    margin-left:-73%;
-    margin-top:4%
-}
-.email-id{
-    margin-left:-34%;
-    margin-top:-31%;
 }

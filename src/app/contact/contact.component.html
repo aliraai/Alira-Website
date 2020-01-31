@@ -1,11 +1,13 @@
 
 <div class="header-contact" >
-    <div class="mat-display-2 title">Contact Us!</div>
-    <div fxLayout="rows" style="text-align: center;width: 50%;margin-left:20%">
+    <div class="mat-display-1 title">Get In Touch!</div>
+    <div fxLayout="rows" style="width: 60%;margin-left:20%">
     <div fxFlex>
         <div fxLayout="column">
             <div fxFlex="1 1 auto">
-                <i class="material-icons icon">map</i>
+                <i class="material-icons icon" style="padding-left:15%">
+                    place
+                </i>
             </div>
             <div fxFlex="5 1 auto">
                 <address class="icons">
@@ -19,26 +21,66 @@
         </div>
     </div>
     <div fxFlex>
+    <div fxLayout="column">
         <div fxLayout="column">
-            <div fxFlex="">
-                <i class="material-icons icon">smartphone</i>
+            <div fxFlex>
+                <i class="material-icons icon" style="padding-left:10%;">
+                    smartphone
+                </i>
             </div>
-             <div fxFlex="">
+                <div fxFlex="">
                 <span class="">+91 98900 77818</span>
-             </div>
+                </div>
+                <div fxFlex="">
+                <i class="material-icons icon" style="padding-left:10%;padding-top:3%">
+                    email
+                </i>
+            </div>
+            <div fxFlex=""> 
+                <span style="padding-left:5%;">
+                    hello@alira.ai
+                </span>
+            </div>
         </div>
-    </div>
-    <div>
         <div fxLayout="column">
-            <div fxFlex="">
-                <i class="material-icons icon" >email</i>
-            </div>
-            <div fxFlex="">
-                <span >hello@alira.ai</span>
+            
+        </div>
+    </div>  
+    </div>   
+    <div fxFlex style="margin-left:-10%">
+        <div>
+            Need a demo? Have any questions about our product?
+            We are here to answer and solve any queries you may have.
+            We'd love to hear from you!
+        </div>
+        <div flexLayout="column" style="text-align:center">
+            <div fxFlex>
+                <mat-form-field>
+                    <input type="name" matInput class="input" placeholder="Name">
+                </mat-form-field>
+                <mat-form-field>
+                    <input type="name" matInput placeholder="Emai">
+                </mat-form-field>
+                <mat-form-field>
+                    <textarea name="message" matInput 
+                    placeholder="Message"
+                    rows="1"
+                    cdkTextareaAutosize
+                    cdkAutosizeMaxRows="10"></textarea>
+                </mat-form-field> 
+                <br>
+                <button mat-stroked-button>
+                    Get Started
+                </button> 
             </div>
         </div>
     </div>
-</div>
+    </div>
+    <div style="padding-top:5%">
+        <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+        <iframe width="110%" height="90%" id="gmap_canvas" src="https://maps.google.com/maps?q=Alira%20pune&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        </div> 
+    </div>
 </div>
 <!--
 <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CommonComponent } from './common.component';
+import { SocialBandComponent } from './social-band.component';
 
-describe('CommonComponent', () => {
-  let component: CommonComponent;
-  let fixture: ComponentFixture<CommonComponent>;
+describe('SocialBandComponent', () => {
+  let component: SocialBandComponent;
+  let fixture: ComponentFixture<SocialBandComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CommonComponent ]
+      declarations: [ SocialBandComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CommonComponent);
+    fixture = TestBed.createComponent(SocialBandComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

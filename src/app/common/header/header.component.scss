@@ -1,13 +1,20 @@
 .navbar{
   justify-content: space-between;
-  background-color: white;
+  // background-image: url(../../../assets/img/background/bg-1.jpeg);
+   background-color: white;
 }
+
 .logo{
   margin-left:5%;
-  padding-top:1%;
+  margin-top:1%;
+  width:10%;
 }
 .logo img{
-  width:23%;
+  width:100%;
+}
+.buttons a,button{
+  color:black;
+  font-size: large;
 }
 .name{
   float:right;

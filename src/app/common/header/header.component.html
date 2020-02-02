@@ -1,22 +1,30 @@
 
-<div style="height: 100vh;">
   <mat-toolbar class="navbar">
     <span class="logo"> <!--logo-->
-      <img src="../../../assets/img/logo/icon1.png" alt="alira_logo">
+      <img src="../../../assets/img/logo/logo-grey.PNG" alt="alira_logo">
       <!--<span class="name">Alira</span>-->
     </span>
-
-    <div fxShow="true" fxHide.lt-md="true">
-      <a routerLink="/" mat-button>Home</a>
-      <a routerLink="/patners" mat-button>Patners</a>
-      <a routerLink="/pricing" mat-button>Pricing</a>
-      <a routerLink="/blog" mat-button>Blog</a>
-      <a routerLink="/contact" mat-button>Contact</a>
+    
+    <div fxShow="true" fxHide.lt-md="true" class="buttons">
+      <a routerLink="/" mat-button disableRipple=true>Home</a>
+      <a routerLink="/pricing" mat-button disableRipple=true>Pricing</a>
+      <a routerLink="/blog" mat-button disableRipple=true>Blog</a>
+      <mat-menu #appMenu="matMenu">
+        <a routerLink="/patners" mat-menu-item disableRipple=true>Patners</a>
+        <a routerLink="/contact" mat-menu-item disableRipple=true>About</a>
+        <a routerLink="/contact" mat-menu-item disableRipple=true>Careers</a>
+        <a routerLink="/contact" mat-menu-item disableRipple=true>Contact Us</a>
+      </mat-menu>
+      <button mat-button [matMenuTriggerFor]="appMenu" disableRipple=true>
+        Company
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </button>
     </div>
 
-    <div fxShow="true" fxHide.lt-md="true">
-      <button mat-flat-button class="btn" color="primary">Get Started</button>
-      <button mat-button>Login</button>
+    <div fxShow="true" fxHide.lt-md="true" class="buttons">
+      <button mat-flat-button class="btn" 
+        color="primary" disableRipple=true>Get Started</button>
+      <button mat-button disableRipple=true>Login</button>
     </div>
 
     <div fxShow="true" fxHide.gt-sm="true">
@@ -29,9 +37,9 @@
   <mat-sidenav-container fxFlexFill class="example-container">
     <mat-sidenav #sidenav fxLayout="column">
       <div fxLayout="column">
-        <!--<button mat-icon-button (click)="sidenav.toggle()">
+        <button mat-icon-button (click)="sidenav.toggle()">
           <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
-        </button>-->
+        </button>
         <a routerLink="/" mat-button>Home</a>
         <a routerLink="/patners" mat-button>Patners</a>
         <a routerLink="/pricing" mat-button>Pricing</a>
@@ -39,12 +47,14 @@
         <a routerLink="/contact" mat-button>Contact</a>
       </div>
       <div>
-        <button mat-flat-button color="primary" class="btn">Get Started</button>
-        <button mat-button>Login</button>
+        <button mat-flat-button color="primary" 
+          class="btn" disableRipple=true >Get Started</button>
+        <button mat-button disableRipple=true>Login</button>
       </div>
     </mat-sidenav>
-    <mat-sidenav-content fxFlexFill>
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
+      <mat-sidenav-content fxFlexFill>
+        <!-- <div class="bg"> -->
+        <router-outlet></router-outlet>
+      <!-- </div> -->
+      </mat-sidenav-content>
   </mat-sidenav-container>
-</div>

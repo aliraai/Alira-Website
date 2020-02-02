@@ -1,85 +1,80 @@
-
-<div class="header-contact" >
-    <div class="mat-display-1 title">Get In Touch!</div>
-    <div fxLayout="rows" style="width: 60%;margin-left:20%">
-    <div fxFlex>
-        <div fxLayout="column">
-            <div fxFlex="1 1 auto">
-                <i class="material-icons icon" style="padding-left:15%">
-                    place
-                </i>
-            </div>
-            <div fxFlex="5 1 auto">
-                <address class="icons">
-                    204, 2<sup>nd</sup> floor, Nyati Eureka,<br>
-                    Mundhwa-Kharadi Road, Kharadi,<br>
-                    Pune - 411014<br>
-                    Maharashtra
-                    India
-                </address>
-            </div>
-        </div>
-    </div>
-    <div fxFlex>
-    <div fxLayout="column">
-        <div fxLayout="column">
-            <div fxFlex>
-                <i class="material-icons icon" style="padding-left:10%;">
-                    smartphone
-                </i>
-            </div>
-                <div fxFlex="">
-                <span class="">+91 98900 77818</span>
-                </div>
-                <div fxFlex="">
-                <i class="material-icons icon" style="padding-left:10%;padding-top:3%">
-                    email
-                </i>
-            </div>
-            <div fxFlex=""> 
-                <span style="padding-left:5%;">
-                    hello@alira.ai
-                </span>
-            </div>
-        </div>
-        <div fxLayout="column">
-            
-        </div>
-    </div>  
-    </div>   
-    <div fxFlex style="margin-left:-10%">
-        <div>
-            Need a demo? Have any questions about our product?
-            We are here to answer and solve any queries you may have.
-            We'd love to hear from you!
-        </div>
-        <div flexLayout="column" style="text-align:center">
-            <div fxFlex>
-                <mat-form-field>
-                    <input type="name" matInput class="input" placeholder="Name">
-                </mat-form-field>
-                <mat-form-field>
-                    <input type="name" matInput placeholder="Emai">
-                </mat-form-field>
-                <mat-form-field>
-                    <textarea name="message" matInput 
-                    placeholder="Message"
-                    rows="1"
-                    cdkTextareaAutosize
-                    cdkAutosizeMaxRows="10"></textarea>
-                </mat-form-field> 
-                <br>
-                <button mat-stroked-button>
-                    Get Started
-                </button> 
-            </div>
-        </div>
-    </div>
-    </div>
-    <div style="padding-top:5%">
-        <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
-        <iframe width="110%" height="90%" id="gmap_canvas" src="https://maps.google.com/maps?q=Alira%20pune&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+<div fxLayout="row" style="background-color: white;">
+    <div fxFlex style="padding-top: 1px;">
+        <div id="map-container-google-1" class="z-depth-1-half map-container" 
+                                        style="height: 500px">
+            <iframe width="100%" height="100%" id="gmap_canvas" 
+                    src="https://maps.google.com/maps?q=Alira%20pune&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
         </div> 
+    </div>
+    <div fxFlex>
+        <div fxLayout="column">
+            <div class="title1">
+                We'd love to hear from you!<br>
+                Whether you have a question about our features, trials, pricing or need a demo 
+                <br>the Alira team is ready to answer all of them.
+            </div>
+            <section class="contact-form">
+                    <form fxLayout="column" fxLayoutAlign>
+                        <mat-form-field>
+                            <input type="name" matInput placeholder="Name">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input type="email" matInput placeholder="Email">
+                        </mat-form-field>   
+                        <mat-form-field>
+                            <textarea name="message" matInput  cdkTextareaAutosize 
+                            matTextareaAutosize
+                            [matAutosizeMaxRows]="5" 
+                            placeholder="Message" 
+                            rows="1" ></textarea>
+                          </mat-form-field>
+                          <button mat-stroked-button class="btn">
+                            Get Started</button>     
+                    </form>
+                </section>
+            <div fxFlex>
+                
+                <div fxFlex >
+                    <h3 class="title1">Pune Office:  </h3>
+                    <mat-grid-list cols="2" rowHeight="100px">
+                        <mat-grid-tile>
+                            <i class="material-icons">place</i>
+                            <address class="addr">
+                                204, 2<sup>nd</sup> floor, Nyati Eureka,<br>
+                                Mundhwa-Kharadi Road, Kharadi,<br>
+                                Pune - 411014<br>
+                                Maharashtra
+                                India
+                            </address>
+                        </mat-grid-tile>
+                        <mat-grid-tile>
+                            <div fxLayout="row" style="width:100% ;">
+                                <div fxFlex>
+                                    <div fxLayout="column" style="text-align:center">
+                                        <div fxFlex>
+                                            <i class="material-icons icons">smartphone</i>
+                                        </div>
+                                         <div fxFlex>
+                                            <span>+91 98900 77818</span>
+                                         </div>
+                                    </div>
+                                </div>
+                                <div fxFlex>
+                                    <div fxLayout="column" style="text-align:center">
+                                        <div fxFlex>
+                                            <i class="material-icons icons" >email</i>
+                                        </div>
+                                        <div fxFlex>
+                                            <span>hello@alira.ai</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <!--

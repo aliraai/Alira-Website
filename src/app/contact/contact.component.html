@@ -1,4 +1,42 @@
-<div fxLayout="row" style="background-color: white;">
+<div fxLayout="column" style="background-color: white;">
+<div fxFlex  class="flex-container" style="text-align: center;">
+    <div class="mat-display-1">Get In Touch!
+    </div>
+    <div class="title">
+        We'd love to hear from you!
+        Whether you have a question about our features, trials, pricing or need a demo 
+        the Alira team is ready to answer all of them.
+    </div>
+</div>
+<div fxFlex>
+<app-form></app-form>
+</div>
+<div fxFlex>
+    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+        <div fxFlex id="map-container-google-1" 
+            class="flex-container z-depth-1-half map-container" >
+            <iframe width="100%" height="100%" id="gmap_canvas" 
+                    src="https://maps.google.com/maps?q=Alira%20pune&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        </div>
+        <div fxFlex>
+            <div class="contact-info card">
+                <!-- <div class="card"> -->
+                <div>
+                    <i class="material-icons icons">smartphone</i>{{phone}}
+                </div>
+                <div class="info">
+                    <i class="material-icons icons" >email</i>{{email}}
+                </div>
+                <div class="info">
+                    <i class="material-icons">place</i>{{address}}
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- <div fxLayout="row" style="background-color: white;">
     <div fxFlex style="padding-top: 1px;">
         <div id="map-container-google-1" class="z-depth-1-half map-container" 
                                         style="height: 500px">
@@ -40,11 +78,12 @@
                         <mat-grid-tile>
                             <i class="material-icons">place</i>
                             <address class="addr">
-                                204, 2<sup>nd</sup> floor, Nyati Eureka,<br>
+                                {{address}}
+                                 204, 2<sup>nd</sup> floor, Nyati Eureka,<br>
                                 Mundhwa-Kharadi Road, Kharadi,<br>
                                 Pune - 411014<br>
                                 Maharashtra
-                                India
+                                India 
                             </address>
                         </mat-grid-tile>
                         <mat-grid-tile>
@@ -55,7 +94,7 @@
                                             <i class="material-icons icons">smartphone</i>
                                         </div>
                                          <div fxFlex>
-                                            <span>+91 98900 77818</span>
+                                            <span> {{phone}} </span>
                                          </div>
                                     </div>
                                 </div>
@@ -65,7 +104,7 @@
                                             <i class="material-icons icons" >email</i>
                                         </div>
                                         <div fxFlex>
-                                            <span>hello@alira.ai</span>
+                                            <span> {{email}} </span>
                                         </div>
                                     </div>
                                 </div>
@@ -76,7 +115,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!--
 <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
     <div fxFlex="1 1 auto">

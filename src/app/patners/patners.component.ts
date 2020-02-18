@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PatnerDetails, setPatnerDetails } from './patner-details';
 
 @Component({
   selector: 'app-patners',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./patners.component.scss']
 })
 export class PatnersComponent {
-  
 
+  
 }
 

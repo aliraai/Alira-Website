@@ -1,0 +1,26 @@
+<div class="form-container">
+    <form [formGroup]="rForm" 
+            (ngSubmit)="addPost(rForm.value)"
+            fxLayout="column">
+            <mat-form-field>
+                <input type="text" matInput placeholder="Name" formControlName="name">
+            </mat-form-field>
+            <mat-form-field>
+                <input type="email" matInput placeholder="Email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field>
+                <input type="text" matInput placeholder="Company Name" formControlName="company">
+            </mat-form-field>
+            <mat-form-field>
+                <textarea matInput  cdkTextareaAutosize 
+                matTextareaAutosize
+                [matAutosizeMaxRows]="5" 
+                placeholder="Message" 
+                rows="1"
+                formControlName="message" ></textarea>
+            </mat-form-field>
+            <button mat-stroked-button class="btn" [disabled]="!rForm.valid">
+                Get Started
+            </button>  
+    </form>
+</div>

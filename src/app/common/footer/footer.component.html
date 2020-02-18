@@ -1,47 +1,92 @@
-<div fxLayout='row' fxLayout.xs="column" fxLayout.sm="column" style="padding-top:5px">
-    <div fxFlex="33">
-        <div class="logo">
-            <img src="../../../assets/img/logo/logo-black.PNG"> <br>
-            <span class="text">Copyright © 2020 <br>
-            <a routerLink="/">Alira</a> 
-            <small> All Rights Reserved </small></span>
+<div class="container">
+    <div class="flex-container tab" fxLayout="row">
+        <div fxFlex>
+            <div class="heading">Join Our Community Newsletter</div>
+            <small> Stay up to date with the latest news from the Rasa community</small>
+        </div>
+        <div fxFlex fxLayoutAlign="end end">
+            <form [formGroup]="mForm"
+            (ngSubmit)="addPost(mForm.value)"
+            fxLayout="row">
+            <!-- <mat-form-field>
+                <input type="email" matInput placeholder="Name" formControlName="email">
+            </mat-form-field> -->
+            <mat-form-field appearance="legacy">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" formControlName="email" style="padding:0em">
+              </mat-form-field>
+            
+            <button mat-flat-button  class="btn"
+                    color="primary" disableRipple=true>Subscribe</button>
+                </form>
         </div>
     </div>
-    <div fxFlex="33" class="one">
-        <div class="col2">
-            <span class="txt">Services Links:</span>
-            <div fxLayout="row" class="two">
-                <div fxFlex="50">
-                    <mat-nav-list>
-                        <a mat-list-item>What we provide </a>
-                        <a mat-list-item>Join Us</a>
-                        <a mat-list-item>FAQ</a>
-                    </mat-nav-list>
-                </div>
-                <div fxFlex="35"> 
-                    <mat-nav-list>
-                        <a mat-list-item>Our Blogs</a>
-                        <a mat-list-item>Contact Us</a>
-                        <a mat-list-item>Easy Pay</a>
-                    </mat-nav-list>
-                </div>
-            </div>
+</div>
+<hr>
+<div class="container">
+    <div class="flex-container" fxLayout="row">
+        <div fxFlex class="logo"  fxLayoutAlign="center start">
+            <img src="../../../assets/img/logo/alira_logo_black.png"/> <br>
         </div>
-    </div>
-    <div fxFlex="33">
-        <span class="txt">Get In Touch...</span>
-        <ul style="list-style-type: none;">
-            <li><strong>Phone:</strong> +919890077818</li>
-            <li><strong>Email:</strong> <span style="text-transform: lowercase">hello@alira.ai</span></li>
-            <li><strong>Address:</strong>
-                <address>
-                    204, 2<sup>nd</sup> floor, Nyati Eureka,<br>
-                    Mundhwa-Kharadi Road, Kharadi,<br>
-                    Pune - 411014<br>
-                    Maharashtra
-                    India
-                    </address>
-            </li>
-        </ul>
+        <div fxFlex style="display:block" class="why">
+            <span class="title">  Why Rasa </span>
+            <mat-nav-list dense>
+                <a mat-list-item> Overview </a>
+                <a mat-list-item> Features </a>
+                <a mat-list-item> Support </a>
+                <a mat-list-item> Docs </a>
+             </mat-nav-list>
+        </div>
+        <div fxFlex class="plans">
+           <span class="title"> Plans And Pricing </span>
+            <mat-nav-list dense>
+                <a mat-list-item> Compare Plans </a>
+                <a mat-list-item> Enterprise </a>
+             </mat-nav-list>
+        </div>
+        <div fxFlex class="solutions">
+            <span class="title"> Solutions </span>
+            <mat-nav-list dense>
+                <a mat-list-item> Enterprise Operations</a>
+                <a mat-list-item> Customer Service </a>
+                <a mat-list-item> Lead Generations </a>
+                <a mat-list-item> Financial Services </a>
+                <a mat-list-item> Healthcare </a>
+                <a mat-list-item> Voice </a>
+                <a mat-list-item ></a>
+                <a mat-list-item> Case Study</a>
+             </mat-nav-list>
+        </div>
+        <div fxFlex class="industries">
+            <span class="title"> Industries </span>
+            <mat-nav-list dense>
+                <a mat-list-item> Healthcare</a>
+                <a mat-list-item> Insurance </a>
+                <a mat-list-item> Banking </a>
+                <a mat-list-item> Telecom </a>
+                <a mat-list-item> Travel and Transportt </a>
+             </mat-nav-list>
+        </div>
+        <div fxFlex class="community">
+            <span class="title"> Community </span>
+            <mat-nav-list dense>
+                <a mat-list-item> Join the Community </a>
+                <a mat-list-item> How to Contribute </a>
+                <a mat-list-item> Community Showcase </a>
+                <a mat-list-item> Forum </a>
+             </mat-nav-list>
+        </div>
+        <div fxFlex class="company">
+            <span class="title"> Company </span>
+            <mat-nav-list dense>
+                <a mat-list-item> About Us </a>
+                <a mat-list-item> Career </a>
+                <a mat-list-item> Our Mission </a>
+                <a mat-list-item> How we make money </a>
+                <a mat-list-item> Research </a>
+                <a mat-list-item> Blog </a>
+                <a mat-list-item> Contact Us</a>
+             </mat-nav-list>
+        </div>
     </div>
 </div>

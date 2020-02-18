@@ -11,10 +11,12 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatTableModule} from '@angular/material/table';
+
 const material=[
   MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule,
   MatGridListModule,MatCardModule,MatFormFieldModule,MatSelectModule,MatInputModule,
-  MatButtonToggleModule, MatMenuModule
+  MatButtonToggleModule, MatMenuModule, MatTableModule
 ];
 
 @NgModule({

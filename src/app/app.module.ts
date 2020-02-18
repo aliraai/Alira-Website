@@ -18,6 +18,13 @@ import { SearchComponent } from './search/search.component';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from './common/shared/shared.module';
+import { FormComponent } from './contact/form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PricingTableComponent } from './pricing/pricing-table/pricing-table.component';
+import { BlogSectionComponent } from './home/blog-section/blog-section.component';
+import { ArticleSectionComponent } from './home/article-section/article-section.component';
+import { SocialSectionComponent } from './home/social-section/social-section.component';
+import { HeaderSectionComponent } from './home/header-section/header-section.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +39,12 @@ import { SharedModule } from './common/shared/shared.module';
     EventsComponent,
     SearchComponent,
     HomeComponent,
+    FormComponent,
+    PricingTableComponent,
+    BlogSectionComponent,
+    ArticleSectionComponent,
+    SocialSectionComponent,
+    HeaderSectionComponent,
     
   ],
   imports: [
@@ -41,7 +54,8 @@ import { SharedModule } from './common/shared/shared.module';
     MaterialModule,
     FlexLayoutModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

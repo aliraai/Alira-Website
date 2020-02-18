@@ -1,0 +1,51 @@
+.mat-display-1{
+    text-align: center;
+}
+mark{
+    background-color:#fd4;
+}
+.body{
+    padding:1em 8em;
+}
+.box{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    max-width: 520px;
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(225, 232, 237);
+    border-radius: 5px;
+    padding-bottom: 1em;
+    background-color: #999;
+}
+.mat-card-subtitle:not(:first-child){
+    margin-left:2em;
+    margin-top: -30px;
+}
+.social-icon{
+    float: right;
+}
+.content{
+    padding:2em;
+    text-align: justify;
+    line-height: 1.3em;
+}
+.image img{ 
+    width: 70%;
+    margin-left: 4.5em;
+    border-radius: 5px;
+}
+hr{
+    width:109%;
+    margin-left:-1em;
+    opacity:50%;
+}
+.footer a{
+    font-size:12px;
+    font-weight: bolder;
+    color:#fff;
+}
+.social{
+    background-color: #fff;
+}

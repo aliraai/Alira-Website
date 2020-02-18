@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
+import { Component, OnInit, ViewChild, HostListener, ElementRef } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
@@ -9,14 +7,28 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  scrolling: boolean;
+  constructor() {
+      this.scrolling = false;
+    }
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
-  constructor(private breakpointObserver: BreakpointObserver) { }
+  @HostListener('window:scroll', ['$event']) onScrollEvent($event){
+   // console.log($event['Window']);
+    console.log("scrolling");
+    let pos = document.documentElement.scrollTop;
+    console.log("**************************");
+    console.log(pos);
+    console.log("**************************");
+    if(pos<30){
+      this.scrolling=false;
+      console.log(this.scrolling);
 
+    }
+    if(!this.scrolling) {
+      this.scrolling = true;
+    }
+    
+ }
   ngOnInit() {
   }
 

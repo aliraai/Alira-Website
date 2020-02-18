@@ -3,12 +3,25 @@
 
 
 html, body { height: 100%; }
-body { margin: 0;  }
-*{font-family: futuraLight, "Helvetica Neue", sans-serif;}
+body { margin: 0;}
+*{font-family: Roboto, "Helvetica Neue", sans-serif;
+    }
+
 address{
     font-style: normal;
     padding-left:5%;
 }
-.mat-display-2,.mat-display-1,.mat-display-3{
-    font-family: futuraLight, "Helvetica Neue", sans-serif;
+
+
+.mat-display-2,.mat-display-1,.mat-h4{
+    // font-family:Roboto, sans-serif;
+    font-family: Roboto,futuraLight, "Helvetica Neue", sans-serif;
+    background-color: white;
+}
+.mat-button-focus-overlay { 
+    background-color: transparent!important; 
+    }
+.mat-drawer-container{
+    // background-color: #64b;
+    background-color: #AA00FF;
 }

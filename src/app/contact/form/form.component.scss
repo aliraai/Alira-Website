@@ -1,0 +1,16 @@
+.form-container{
+    display: block;
+    width: 50%;
+    padding: 2em;
+    margin: 2em auto;
+    background: #fff;
+}
+.btn{
+    width:fit-content;
+    margin-left:40%;
+}
+@media(max-width:700px){
+    .form-container{
+        width: 70%;
+    }
+}

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DATA } from './pricing.model'
+
+
 
 @Component({
   selector: 'app-pricing',

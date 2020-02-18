@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from '../footer/footer.component';
 import { SocialBandComponent } from '../social-band/social-band.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +14,8 @@ import { SocialBandComponent } from '../social-band/social-band.component';
   imports: [
     MaterialModule,
     RouterModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ReactiveFormsModule
   ],
   exports:[HeaderComponent, FooterComponent,SocialBandComponent]
 })

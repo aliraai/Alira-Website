@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="flex-container tab" fxLayout="row">
+    <div class="flex-container tab" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" >
         <div fxFlex>
             <div class="heading">Join Our Community Newsletter</div>
             <small> Stay up to date with the latest news from the Rasa community</small>
@@ -13,7 +13,7 @@
             </mat-form-field> -->
             <mat-form-field appearance="legacy">
                 <mat-label>Email</mat-label>
-                <input matInput placeholder="Email" formControlName="email" style="padding:0em">
+                <input matInput placeholder="Email" formControlName="mail" style="padding:0em">
               </mat-form-field>
             
             <button mat-flat-button  class="btn"
@@ -24,12 +24,12 @@
 </div>
 <hr>
 <div class="container">
-    <div class="flex-container" fxLayout="row">
+    <div class="flex-container" fxLayout="row"  fxLayout.xs="column" fxLayout.sm="column">
         <div fxFlex class="logo"  fxLayoutAlign="center start">
             <img src="../../../assets/img/logo/alira_logo_black.png"/> <br>
         </div>
-        <div fxFlex style="display:block" class="why">
-            <span class="title">  Why Rasa </span>
+        <div fxFlex  class="why">
+            <span class="title">  Why Alira </span>
             <mat-nav-list dense>
                 <a mat-list-item> Overview </a>
                 <a mat-list-item> Features </a>
@@ -38,7 +38,7 @@
              </mat-nav-list>
         </div>
         <div fxFlex class="plans">
-           <span class="title"> Plans And Pricing </span>
+           <span class="title"> Pricing </span>
             <mat-nav-list dense>
                 <a mat-list-item> Compare Plans </a>
                 <a mat-list-item> Enterprise </a>
@@ -53,7 +53,6 @@
                 <a mat-list-item> Financial Services </a>
                 <a mat-list-item> Healthcare </a>
                 <a mat-list-item> Voice </a>
-                <a mat-list-item ></a>
                 <a mat-list-item> Case Study</a>
              </mat-nav-list>
         </div>
@@ -88,5 +87,28 @@
                 <a mat-list-item> Contact Us</a>
              </mat-nav-list>
         </div>
+    </div>
+</div>
+<hr>
+<div fxLayout="row" class="last-line"  fxLayout.xs="column" fxLayout.sm="column">
+    <div fxFlex fxLayoutAlign="start">
+        <a>
+            <a href="https://www.facebook.com/aliraassistant" class="social-media-icons" target="_blank">
+                <img src="../../../assets/img/social-media-icons/facebook.svg">
+            </a>
+        </a>
+        <a>
+            <a href="https://www.instagram.com/aliraassistant/" class="social-media-icons" target="_blank">
+                <img src="../../../assets/img/social-media-icons/instagram.svg">
+            </a>
+        </a>
+        <a>
+            <a href="https://twitter.com/aliraassistant" class="social-media-icons" target="_blank">
+                <img src="../../../assets/img/social-media-icons/twitter.svg">
+            </a>
+        </a>
+    </div>
+    <div fxFlex fxLayoutAlign="end" class="copy-right">
+        Copyright © 2020 Alira All Rights Reserved
     </div>
 </div>

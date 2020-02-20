@@ -1,8 +1,8 @@
 <div class="social">
 <div class="mat-display-1">
-    <mark>What they're saying</mark>
+    What they're saying
 </div>
-<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="1em" class="body">
+<div fxLayout="row"  fxLayout.xs="column" fxLayout.sm="column"fxLayoutGap="1em" [ngClass]="getContainer()">
     <mat-card class="child-1 box" fxFlex>
         <img src="../../../assets/img/home-page/face-24px.svg"> 
         <img src="../../../assets/img/social-media-icons/twitter.svg" class="social-icon">
@@ -20,7 +20,7 @@
                 <img src="../../../assets/img/home-page/social-img.jpeg">
             </div>
         </mat-card-content>
-        <hr>
+        <mat-divider></mat-divider>
         <mat-card-actions class="footer">
                 <a>See Trafik's other Tweets</a>
         </mat-card-actions>
@@ -42,7 +42,7 @@
                 <img src="../../../assets/img/home-page/social-img.jpeg">
             </div>
         </mat-card-content>
-        <hr>
+        <mat-divider></mat-divider>
         <mat-card-actions class="footer">
                 <a>See Trafik's other Tweets</a>
         </mat-card-actions>
@@ -64,7 +64,7 @@
                 <img src="../../../assets/img/home-page/social-img.jpeg">
             </div>
         </mat-card-content>
-        <hr>
+        <mat-divider></mat-divider>
         <mat-card-actions class="footer">
                 <a>See Trafik's other Tweets</a>
         </mat-card-actions>

@@ -3,11 +3,11 @@ import {Subscription} from 'rxjs';
 import {MediaChange, MediaObserver} from '@angular/flex-layout';
 
 @Component({
-  selector: 'app-header-section',
-  templateUrl: './header-section.component.html',
-  styleUrls: ['./header-section.component.scss']
+  selector: 'app-project-section',
+  templateUrl: './project-section.component.html',
+  styleUrls: ['./project-section.component.scss']
 })
-export class HeaderSectionComponent implements OnInit {
+export class ProjectSectionComponent implements OnInit {
   watcher:Subscription;
   activeMediaQuery = '';
   isSmallContiner = false;

@@ -1,0 +1,34 @@
+.product{
+    background-color: #fff;
+}
+.mat-display-1,p{
+    text-align: center;   
+}
+p{
+    opacity: 60%;
+}
+.container{
+    padding:1em 8em;
+}
+// .center{
+//     padding-left: 8.5em;
+// }
+.title{
+    font-weight: bolder;
+    font-size:1.5em;
+    color:#000;
+}
+.body {
+    background-color: #fff;
+    --primary-color: #5a17ee;
+    --secondary-color: white;
+    // color: rgb(109, 112, 139);
+    color:#64b;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 9px 22px 0px;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 0.95em;
+    margin: 0px 0px 1.75em;
+    // overflow: hidden;
+    padding: 2em 1.5em;
+}

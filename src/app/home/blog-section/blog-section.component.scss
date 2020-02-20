@@ -1,11 +1,16 @@
 .blog{
     background-color:#fff;
 }
-.body{
+.container{
     padding:1em 8em;
 }
-mat-card{
+
+.child{
     width:80%;
+    height: 60%;
+}
+.child_xs{
+    width:100%;
     height: 60%;
 }
 .box{
@@ -31,10 +36,3 @@ mat-card-title{
 .mat-display-1{
     text-align: center;
 }
-
-mark{
-    background-color:#fd4;
-}
-// .user-photo img{
-
-// }

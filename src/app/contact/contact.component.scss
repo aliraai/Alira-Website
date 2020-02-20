@@ -13,11 +13,11 @@
 }
 .contact-info{
     // border: 1px solid red;
-    padding:0em 5em;
+    padding:2em 5em;
 }
 
 .icons{
-    margin-top:0.5em;
+    
 }
 
 .info{
@@ -26,7 +26,15 @@
 .card{
     background-color: #64b;
     color:white;    
-    padding:0em 0.5em;
+    height: 100%;
+}
+.address{
+    // border:1px solid white;
+    width:15em;
+    padding-top:3em;
+    padding-bottom:3em;
+    padding-left:3em;
+    padding-right: 3em;
 }
 .map-container{
     // height: 300px;

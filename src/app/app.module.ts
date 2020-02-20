@@ -25,6 +25,9 @@ import { BlogSectionComponent } from './home/blog-section/blog-section.component
 import { ArticleSectionComponent } from './home/article-section/article-section.component';
 import { SocialSectionComponent } from './home/social-section/social-section.component';
 import { HeaderSectionComponent } from './home/header-section/header-section.component';
+import { ProductSectionComponent } from './home/product-section/product-section.component';
+import { ProjectSectionComponent } from './home/project-section/project-section.component';
+import { PlanTableComponent } from './pricing/plan-table/plan-table.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +48,9 @@ import { HeaderSectionComponent } from './home/header-section/header-section.com
     ArticleSectionComponent,
     SocialSectionComponent,
     HeaderSectionComponent,
+    ProductSectionComponent,
+    ProjectSectionComponent,
+    PlanTableComponent,
     
   ],
   imports: [

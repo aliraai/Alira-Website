@@ -11,25 +11,19 @@ export class HeaderComponent implements OnInit {
   constructor() {
       this.scrolling = false;
     }
-
+  pos:any;
   @HostListener('window:scroll', ['$event']) onScrollEvent($event){
-   // console.log($event['Window']);
-    console.log("scrolling");
-    let pos = document.documentElement.scrollTop;
-    console.log("**************************");
-    console.log(pos);
-    console.log("**************************");
-    if(pos<30){
-      this.scrolling=false;
-      console.log(this.scrolling);
-
-    }
-    if(!this.scrolling) {
-      this.scrolling = true;
-    }
-    
- }
+    this.pos = document.documentElement.scrollTop;
+    // console.log(this.pos);
+  }
   ngOnInit() {
   }
-
+  getClass(){
+    if(this.pos>0){
+      this.scrolling = true;
+    }else{
+      this.scrolling = false;
+    }
+    return {'hdr': !this.scrolling, 'hdrScroll': this.scrolling}
+  }
 }

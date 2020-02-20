@@ -1,20 +1,87 @@
-<div style="padding-left: 20%;">
-    <div fxLayout="column">
-        <div fxLayout="row" fxLayoutAlign="space-evenly center"
-            style="width: 70%;">
-            <div class="plan" fxFlex>Plan</div>
-            <div class="Free" fxFlex>Free</div>
-            <div class="Starter" fxFlex>Starter</div>
-            <div class="Pro" fxFlex>Pro</div>
-            <div class="enterprise" fxFlex>Enterprise</div>
+<table mat-table  [dataSource]="dataSource" class="mat-elevation-z8" [ngClass]="getWidth()">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="Plans">
+      <th mat-header-cell *matHeaderCellDef> Plans </th>
+      <td mat-cell *matCellDef="let element"> 
+          {{element.plan}} 
+        </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Free">
+      <th mat-header-cell *matHeaderCellDef> Free </th>
+      <td mat-cell *matCellDef="let element"> 
+            <div [ngSwitch]=element.free>
+                <div *ngSwitchCase="'yes'">
+                    <i class="material-icons"> done </i>                        
+                </div>
+                <div *ngSwitchCase="'no'">
+                    <i class="material-icons"> clear </i>                        
+                </div>
+                <div *ngSwitchDefault>
+                    {{element.free}}
+                </div>
+            </div>
+        </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Starter">
+        <th mat-header-cell *matHeaderCellDef> Starter </th>
+        <td mat-cell *matCellDef="let element"> 
+            <div [ngSwitch]=element.free>
+                <div *ngSwitchCase="'yes'">
+                    <i class="material-icons"> done </i>                        
+                </div>
+                <div *ngSwitchCase="'no'">
+                    <i class="material-icons"> clear </i>                        
+                </div>
+                <div *ngSwitchDefault>
+                    {{element.starter}}
+                </div>
+            </div>
+        </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Pro">
+      <th mat-header-cell *matHeaderCellDef> Pro </th>
+      <td mat-cell *matCellDef="let element"> 
+        <div [ngSwitch]=element.free>
+            <div *ngSwitchCase="'yes'">
+                <i class="material-icons"> done </i>                        
+            </div>
+            <div *ngSwitchCase="'no'">
+                <i class="material-icons"> clear </i>                        
+            </div>
+            <div *ngSwitchDefault>
+                {{element.pro}}
+            </div>
         </div>
-        <div fxLayout="row" fxLayoutAlign="space-evenly center"
-            style="width: 70%;">
-            <div class="plan" fxFlex>Solution</div>
-            <div class="Free" fxFlex>SaaS</div>
-            <div class="Starter" fxFlex>SaaS</div>
-            <div class="Pro" fxFlex>SaaS</div>
-            <div class="Pro" fxFlex>SaaS/License on cloud/on-premise</div>
-        </div>
-    </div>
-</div>
+      </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Enterprise">
+        <th mat-header-cell *matHeaderCellDef> Enterprise </th>
+        <td mat-cell *matCellDef="let element"> 
+            <div [ngSwitch]=element.free>
+                <div *ngSwitchCase="'yes'">
+                    <i class="material-icons"> done </i>                        
+                </div>
+                <div *ngSwitchCase="'no'">
+                    <i class="material-icons"> clear </i>                        
+                </div>
+                <div *ngSwitchDefault>
+                    {{element.enterprise}}
+                </div>
+            </div>
+        </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="Columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: Columns;"></tr>
+  </table>

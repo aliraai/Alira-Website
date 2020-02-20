@@ -2,7 +2,7 @@
 <div class="mat-display-1">
     Latest from Alira
 </div>
-<div fxLayout="row" fxLayout="row" fxLayoutGap="1em" class="container">
+<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap="1em" [ngClass]="getContainer()">
     <mat-card fxFlex>
         <mat-card-subtitle>Latest Press</mat-card-subtitle>
         <mat-card-content>

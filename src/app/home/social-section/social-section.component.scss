@@ -1,23 +1,21 @@
 .mat-display-1{
     text-align: center;
-}
-mark{
-    background-color:#fd4;
-}
-.body{
+}   
+.container{
     padding:1em 8em;
 }
 .box{
     cursor: pointer;
     background-color: rgb(255, 255, 255);
     max-width: 520px;
-    overflow: hidden;
+    // overflow: hidden;
     border-width: 1px;
     border-style: solid;
     border-color: rgb(225, 232, 237);
     border-radius: 5px;
     padding-bottom: 1em;
-    background-color: #999;
+    // background-color: #ceeae6;
+    background-color: #fff;
 }
 .mat-card-subtitle:not(:first-child){
     margin-left:2em;
@@ -36,15 +34,11 @@ mark{
     margin-left: 4.5em;
     border-radius: 5px;
 }
-hr{
-    width:109%;
-    margin-left:-1em;
-    opacity:50%;
-}
+
 .footer a{
     font-size:12px;
     font-weight: bolder;
-    color:#fff;
+    color:#57f;
 }
 .social{
     background-color: #fff;

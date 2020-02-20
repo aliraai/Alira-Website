@@ -1,6 +1,6 @@
 
 <!-- Start of navbar-->
-<mat-toolbar class="navbar" [ngClass]="{'hdr': !scrolling, 'hdrScroll': scrolling}">
+<mat-toolbar class="navbar" [ngClass]="getClass()">
   <!--logo-->
     <img class="logo" src="../../../assets/img/logo/alira_logo_black.png" alt="alira_logo">
   
@@ -50,8 +50,10 @@
   </div>
 </mat-toolbar>
 <!--end of navbar-->
-<mat-sidenav-container color="primary" fxFlexFill >
-  <mat-sidenav #sidenav fxLayout="column" class="container" role="navigation">
+<!-- --------------------------------------------------------------------- -->
+  <!-- sidenav start -->
+<mat-sidenav-container color="primary" fxFlexFill>
+  <mat-sidenav #sidenav fxLayout="column" class="container" role="navigation" position="end">
     <div fxLayout="column">
       <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon aria-label="Side nav toggle icon">close</mat-icon>

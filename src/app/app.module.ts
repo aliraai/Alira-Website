@@ -19,7 +19,7 @@ import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from './common/shared/shared.module';
 import { FormComponent } from './contact/form/form.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { PricingTableComponent } from './pricing/pricing-table/pricing-table.component';
 import { BlogSectionComponent } from './home/blog-section/blog-section.component';
 import { ArticleSectionComponent } from './home/article-section/article-section.component';
@@ -61,6 +61,7 @@ import { PlanTableComponent } from './pricing/plan-table/plan-table.component';
     FlexLayoutModule,
     HttpClientModule,
     SharedModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   providers: [],

@@ -1,1 +1,141 @@
+<mat-button-toggle-group  [(ngModel)]="plan" (change)='onChange()'>
+    <mat-button-toggle value="monthly">
+        Monthly
+    </mat-button-toggle>
+    <mat-button-toggle value="6months">
+        6 months
+    </mat-button-toggle>
+    <mat-button-toggle value="yearly">
+        Yearly
+    </mat-button-toggle>
+</mat-button-toggle-group>
+ 
+ USD<mat-slide-toggle [(ngModel)]="value" (change)='onChange()'    >
+ </mat-slide-toggle> INR<br> 
+ 
 
+ <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap="1em" [ngClass]="getContainer()">
+    <mat-card fxFlex class="box">
+        <mat-card-title>
+            FREE
+            <div style="font-weight: bold;">
+                <span [ngSwitch]=value>
+                    <span *ngSwitchCase="true">
+                        {{free | currency:'INR':'symbol'}}
+                    </span>
+                    <span *ngSwitchCase="false">
+                        {{free | currency:'USD':'symbol'}}
+                    </span>
+                </span>
+            </div>
+        </mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <mat-list>
+                <mat-list-item> Number of Bots: 1 </mat-list-item>
+                <mat-list-item> Number of Chats: 100/Month </mat-list-item>
+                <mat-list-item *ngFor="let f of Data"> 
+                    <mat-icon>clear</mat-icon> {{f}}
+                </mat-list-item>
+               </mat-list>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-flat-button class="btn" color="accent" 
+       disableRipple=true>Get Started</button>
+        </mat-card-actions>
+    </mat-card>
+    <mat-card fxFlex class="box">
+        <mat-card-title>
+            STARTER
+            <div style="font-weight: bold;">
+                <span [ngSwitch]=value>
+                    <span *ngSwitchCase="true">
+                        {{starter | currency:'INR':'symbol'}}
+                    </span>
+                    <span *ngSwitchCase="false">
+                        {{starter | currency:'USD':'symbol'}}
+                    </span>
+                </span>
+            </div>
+        </mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <mat-list>
+                <mat-list-item> Number of Bots: 5 </mat-list-item>
+                <mat-list-item> Number of Chats: 100/Month </mat-list-item>
+                <mat-list-item *ngFor="let f of Data"> 
+                    <mat-icon>clear</mat-icon> {{f}}
+                </mat-list-item>
+               </mat-list>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-flat-button class="btn" color="accent" 
+       disableRipple=true>Get Started</button>
+        </mat-card-actions>
+    </mat-card>
+    <mat-card fxFlex class="box">
+        <mat-card-title>
+            PREMIER
+            <div style="font-weight: bold;">
+                <span [ngSwitch]=value>
+                    <span *ngSwitchCase="true">
+                        {{premier | currency:'INR':'symbol'}}
+                    </span>
+                    <span *ngSwitchCase="false">
+                        {{premier | currency:'USD':'symbol'}}
+                    </span>
+                </span>
+            </div>
+        </mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <mat-list>
+                <mat-list-item> Number of Bots: 10 </mat-list-item>
+                <mat-list-item> Number of Chats: 500/Month </mat-list-item>
+                <mat-list-item *ngFor="let f of Data;index as i"> 
+                    <ng-template  [ngIf]="i<6">
+                        <mat-icon>clear</mat-icon>
+                        {{f}} 
+                    </ng-template>
+                    <ng-template [ngIf]="i==6"><mat-icon>done</mat-icon> {{f}}</ng-template>
+                    
+                </mat-list-item>
+               </mat-list>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-flat-button class="btn" color="accent" 
+       disableRipple=true>Get Started</button>
+        </mat-card-actions>
+    </mat-card>
+    <mat-card fxFlex class="box">
+        <mat-card-title>
+            ENTERPRISE
+            <div style="font-weight: bold;">
+                <span [ngSwitch]=currency>
+                    Custom
+                    <!-- <span *ngSwitchCase="'inr'">
+                        {{enterprise | currency:'INR':'symbol'}}
+                    </span>
+                    <span *ngSwitchCase="'usd'">
+                        {{enterprise | currency:'USD':'symbol'}}
+                    </span> -->
+                </span>
+            </div>
+        </mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <mat-list>
+                <mat-list-item> Number of Bots: 1 </mat-list-item>
+                <mat-list-item> Number of Chats: 100/Month </mat-list-item>
+                <mat-list-item *ngFor="let f of Data"> 
+                    <mat-icon>done</mat-icon> {{f}}
+                </mat-list-item>
+               </mat-list>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-flat-button class="btn" color="accent" 
+       disableRipple=true>Get Started</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+ 

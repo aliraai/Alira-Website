@@ -12,11 +12,13 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTableModule} from '@angular/material/table';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 const material=[
   MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule,
   MatGridListModule,MatCardModule,MatFormFieldModule,MatSelectModule,MatInputModule,
-  MatButtonToggleModule, MatMenuModule, MatTableModule
+  MatButtonToggleModule, MatMenuModule, MatTableModule,MatRadioModule,MatSlideToggleModule
 ];
 
 @NgModule({

@@ -21,9 +21,10 @@ hr{
   color:gray;
 }
 .btn{
-  height:100%;
-  margin-top:3%; 
+  // height:2em;
+  // margin-top:3%; 
 }
+
 .heading{
   font-weight: bold;
 }
@@ -36,4 +37,15 @@ hr{
 }
 .social-media-icons{
   padding:0em 1em;
+}
+.list{
+  margin-left:-1em;
+}
+a{
+  text-decoration: none;
+  color:gray
+}
+.mat-form-field{
+  // padding:0em;
+  font-size:10px;
 }

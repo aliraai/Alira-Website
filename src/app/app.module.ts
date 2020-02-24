@@ -28,6 +28,8 @@ import { HeaderSectionComponent } from './home/header-section/header-section.com
 import { ProductSectionComponent } from './home/product-section/product-section.component';
 import { ProjectSectionComponent } from './home/project-section/project-section.component';
 import { PlanTableComponent } from './pricing/plan-table/plan-table.component';
+import { JobPostComponent } from './careers/job-post/job-post.component';
+import { CandidateFormComponent } from './careers/job-post/candidate-form/candidate-form.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { PlanTableComponent } from './pricing/plan-table/plan-table.component';
     ProductSectionComponent,
     ProjectSectionComponent,
     PlanTableComponent,
+    JobPostComponent,
+    CandidateFormComponent,
     
   ],
   imports: [
@@ -62,7 +66,8 @@ import { PlanTableComponent } from './pricing/plan-table/plan-table.component';
     HttpClientModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

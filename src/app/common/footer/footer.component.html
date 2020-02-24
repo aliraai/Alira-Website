@@ -4,20 +4,20 @@
             <div class="heading">Join Our Community Newsletter</div>
             <small> Stay up to date with the latest news from the Rasa community</small>
         </div>
-        <div fxFlex fxLayoutAlign="end end">
-            <form [formGroup]="mForm"
+        <div fxFlex >
+            <form [formGroup]="mForm" fxLayoutAlign="end end    "
             (ngSubmit)="addPost(mForm.value)"
             fxLayout="row">
-            <!-- <mat-form-field>
-                <input type="email" matInput placeholder="Name" formControlName="email">
-            </mat-form-field> -->
-            <mat-form-field appearance="legacy">
+            <div>
+                <mat-form-field appearance="outline">
                 <mat-label>Email</mat-label>
-                <input matInput placeholder="Email" formControlName="mail" style="padding:0em">
-              </mat-form-field>
-            
+                <input matInput placeholder="Email" formControlName="mail" class="email">
+                
+            </mat-form-field>
             <button mat-flat-button  class="btn"
-                    color="primary" disableRipple=true>Subscribe</button>
+                color="primary" disableRipple=true>Subscribe</button>
+            </div>
+
                 </form>
         </div>
     </div>
@@ -30,7 +30,7 @@
         </div>
         <div fxFlex  class="why">
             <span class="title">  Why Alira </span>
-            <mat-nav-list dense>
+            <mat-nav-list dense class="list">
                 <a mat-list-item> Overview </a>
                 <a mat-list-item> Features </a>
                 <a mat-list-item> Support </a>
@@ -39,14 +39,14 @@
         </div>
         <div fxFlex class="plans">
            <span class="title"> Pricing </span>
-            <mat-nav-list dense>
+            <mat-nav-list dense class="list">
                 <a mat-list-item> Compare Plans </a>
                 <a mat-list-item> Enterprise </a>
              </mat-nav-list>
         </div>
         <div fxFlex class="solutions">
             <span class="title"> Solutions </span>
-            <mat-nav-list dense>
+            <mat-nav-list dense class="list">
                 <a mat-list-item> Enterprise Operations</a>
                 <a mat-list-item> Customer Service </a>
                 <a mat-list-item> Lead Generations </a>
@@ -58,17 +58,17 @@
         </div>
         <div fxFlex class="industries">
             <span class="title"> Industries </span>
-            <mat-nav-list dense>
+            <mat-nav-list dense class="list">
                 <a mat-list-item> Healthcare</a>
                 <a mat-list-item> Insurance </a>
                 <a mat-list-item> Banking </a>
                 <a mat-list-item> Telecom </a>
-                <a mat-list-item> Travel and Transportt </a>
+                <a mat-list-item> Travel and Tourism </a>
              </mat-nav-list>
         </div>
         <div fxFlex class="community">
             <span class="title"> Community </span>
-            <mat-nav-list dense>
+            <mat-nav-list dense class="list">
                 <a mat-list-item> Join the Community </a>
                 <a mat-list-item> How to Contribute </a>
                 <a mat-list-item> Community Showcase </a>
@@ -77,7 +77,7 @@
         </div>
         <div fxFlex class="company">
             <span class="title"> Company </span>
-            <mat-nav-list dense>
+            <mat-nav-list dense class="list">
                 <a mat-list-item> About Us </a>
                 <a mat-list-item> Career </a>
                 <a mat-list-item> Our Mission </a>
@@ -109,6 +109,8 @@
         </a>
     </div>
     <div fxFlex fxLayoutAlign="end" class="copy-right">
-        Copyright © 2020 Alira All Rights Reserved
+        <!-- Copyright © 2020 Alira All Rights Reserved -->
+        <!-- <mat-icon>copyright</mat-icon> -->
+        © Alira - 2020 | All Rights Reserved | <a routerLink="/contact"> Imprint</a>
     </div>
 </div>

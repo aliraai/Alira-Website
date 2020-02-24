@@ -3,6 +3,7 @@
 }
 .mat-display-1,p{
     text-align: center;   
+    margin-bottom: 25px;
 }
 p{
     opacity: 60%;
@@ -37,4 +38,12 @@ mat-card-subtitle, .footer{
     border-radius: 1rem;
     // overflow: hidden;
     transition: transform 0.2s ease 0s, box-shadow 0.2s ease 0s;
+}
+.btn{
+    text-align:center;
+}
+.btn button{
+    background-color: #13f;
+    color:#fff;
+    border-radius:0.5em;
 }

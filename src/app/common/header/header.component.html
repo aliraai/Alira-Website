@@ -2,7 +2,7 @@
 <!-- Start of navbar-->
 <mat-toolbar class="navbar" [ngClass]="getClass()">
   <!--logo-->
-    <img class="logo" src="../../../assets/img/logo/alira_logo_black.png" alt="alira_logo">
+    <img class="logo" src={{path}} alt="alira_logo">
   
   <!--Navigation Links-->
   <div fxShow="true" fxHide.lt-md="true" class="buttons">
@@ -25,10 +25,10 @@
     </button>
     <!--Resources-->
     <mat-menu #resourcesMenu="matMenu">
-      <a routerLink="/patners" mat-menu-item disableRipple=true>Blog</a>
-      <a routerLink="/contact" mat-menu-item disableRipple=true>Articles</a>
-      <a routerLink="/contact" mat-menu-item disableRipple=true>FAQ</a>
-      <a routerLink="/contact" mat-menu-item disableRipple=true>Help Desk</a>
+      <a routerLink="/blog" mat-menu-item disableRipple=true>Blog</a>
+      <a routerLink="/articles" mat-menu-item disableRipple=true>Articles</a>
+      <a routerLink="/faq" mat-menu-item disableRipple=true>FAQ</a>
+      <a routerLink="/help-desk" mat-menu-item disableRipple=true>Help Desk</a>
     </mat-menu>
     <button mat-button [matMenuTriggerFor]="resourcesMenu"
     disableRipple=true>

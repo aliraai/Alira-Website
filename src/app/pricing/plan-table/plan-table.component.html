@@ -1,4 +1,6 @@
-<mat-button-toggle-group  [(ngModel)]="plan" (change)='onChange()'>
+<div fxLayout="column">
+    <div fxFlex fxLayoutAlign="center center">
+        <mat-button-toggle-group  [(ngModel)]="plan" (change)='onChange()'>
     <mat-button-toggle value="monthly">
         Monthly
     </mat-button-toggle>
@@ -9,9 +11,16 @@
         Yearly
     </mat-button-toggle>
 </mat-button-toggle-group>
- 
- USD<mat-slide-toggle [(ngModel)]="value" (change)='onChange()'    >
+    </div>
+   <div fxFlex fxLayoutAlign="center center">
+       USD<mat-slide-toggle [(ngModel)]="value" (change)='onChange()'    >
  </mat-slide-toggle> INR<br> 
+   </div>
+ 
+ 
+</div>
+
+ 
  
 
  <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap="1em" [ngClass]="getContainer()">

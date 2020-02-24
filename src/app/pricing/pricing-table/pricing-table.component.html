@@ -40,7 +40,7 @@
                 <div *ngSwitchCase="'no'">
                     <i class="material-icons"> clear </i>                        
                 </div>
-                <div *ngSwitchDefault>
+                <div *ngSwitchDefault [ngClass]="isHeader(element.starter)">
                     {{element.starter}}
                 </div>
             </div>

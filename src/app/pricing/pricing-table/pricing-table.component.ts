@@ -20,6 +20,27 @@ const TABLE_DATA: Plans[]=[
   {plan:'Inbuilt Data Validation',free:'yes',starter:'yes',pro:'yes',enterprise:'yes'},
   {plan:'Logical Branching',free:'yes',starter:'yes',pro:'yes',enterprise:'yes'},
   {plan:'Dynamic Response',free:'no',starter:'no',pro:'yes',enterprise:'yes'},
+  {plan:'Real-time Search',free:'no',starter:'no',pro:'yes',enterprise:'yes'},
+  {plan:'Facebook Messenger',free:'no',starter:'no',pro:'yes',enterprise:'yes'},
+  {plan:'Multi Language Support',free:'no',starter:'no',pro:'yes',enterprise:'yes'},
+  {plan:'Auto Email Follow-Up',free:'no',starter:'no',pro:'yes',enterprise:'yes'},
+  {plan:'',free:'',starter:'Configuration',pro:'',enterprise:''},
+  {plan:'Hide bot in specific urls',free:'no',starter:'no',pro:'yes',enterprise:'yes'},
+  {plan:'Auto-triggering on mobile/desktop',free:'yes',starter:'yes',pro:'yes',enterprise:'yes'},
+  {plan:'On-page chatbot widget',free:'yes',starter:'yes',pro:'yes',enterprise:'yes'},
+  {plan:'Deploy bot on website/blog/app',free:'yes',starter:'yes',pro:'yes',enterprise:'yes'},
+  {plan:'Access bot through Link',free:'yes',starter:'yes',pro:'yes',enterprise:'yes'},
+  {plan:'Live chat integration',free:'yes',starter:'yes',pro:'yes',enterprise:'yes'},
+  {plan:'Whatsapp integration',free:'yes',starter:'yes',pro:'yes',enterprise:'yes'},
+  {plan:'Call integration',free:'yes',starter:'yes',pro:'yes',enterprise:'yes'},
+  {plan:'OTP Validation',free:'no',starter:'no',pro:'no',enterprise:'yes'},
+  {plan:'Text-To-Speech',free:'yes',starter:'yes',pro:'yes',enterprise:'yes'},
+  {plan:'',free:'',starter:'Data Access',pro:'',enterprise:''},
+  {plan:'Email notifications',free:'yes',starter:'yes',pro:'yes',enterprise:'yes'},
+  {plan:'SMS notifications',free:'no',starter:'no',pro:'no',enterprise:'yes'},
+  {plan:'Capture partial conversations',free:'yes',starter:'yes',pro:'yes',enterprise:'yes'},
+  {plan:'Google sheets integration',free:'no',starter:'no',pro:'yes',enterprise:'yes'},
+
 ]
 
 @Component({
@@ -28,6 +49,7 @@ const TABLE_DATA: Plans[]=[
   styleUrls: ['./pricing-table.component.scss']
 })
 export class PricingTableComponent implements OnInit {
+  index = 0;
   Columns:string[] = ['Plans','Free','Starter','Pro','Enterprise'];
   dataSource = TABLE_DATA
   watcher:Subscription;
@@ -75,5 +97,12 @@ export class PricingTableComponent implements OnInit {
   }
   info(val){
     return val;
+  }
+  isHeader(val){
+    switch(val){
+      case 'SaaS': case '5': case '1000/month': console.log("value="+val);break;
+      default:return 'header';
+    }    
+    
   }
 }

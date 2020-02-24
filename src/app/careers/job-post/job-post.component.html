@@ -1,0 +1,28 @@
+<div class="heading">
+    <div class="mat-h4"> {{department}} </div>
+    <div class="mat-display-1"> {{job}} </div>
+</div>
+
+<div class="post">
+    <div class="chips">
+         <mat-chip-list>
+        <mat-chip>
+            {{minSalary | currency:'INR':'symbol'}} - 
+            {{maxSalary | currency:'INR':'symbol'}}
+        </mat-chip>
+        <mat-chip>{{experience}}</mat-chip>
+    </mat-chip-list>
+    </div>
+   
+    <div class="mat-3"> Responsibilities  </div>
+    <ul *ngFor="let responsibility of responsibilities">
+        <li> {{responsibility}} </li>
+    </ul>
+    <div class="mat-3"> Skills  </div>
+    <ul *ngFor="let skill of skills">
+        <li> {{skill}} </li>
+    </ul>
+
+    <app-candidate-form></app-candidate-form>
+
+</div>

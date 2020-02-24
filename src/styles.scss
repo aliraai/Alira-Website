@@ -4,7 +4,7 @@
 
 html, body { height: 100%; }
 body { margin: 0;}
-*{font-family: Roboto, "Helvetica Neue", sans-serif;
+*{font-family: Graphik,Roboto, "Helvetica Neue", sans-serif;
     }
 
 address{
@@ -15,10 +15,10 @@ address{
 
 .mat-display-2,.mat-display-1,.mat-h4{
     // font-family:Roboto, sans-serif;
-    font-family: Roboto,futuraLight, "Helvetica Neue", sans-serif;
+    font-family: GraphikBold,Roboto,futuraLight, "Helvetica Neue", sans-serif;
     background-color: white;
 }
-.mat-button-focus-overlay { 
+.mat-button-focus-overlay .mat-item-list-focus-overlay{ 
     background-color: transparent!important; 
     }
 .mat-drawer-container{

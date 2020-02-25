@@ -16,12 +16,14 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatChipsModule} from '@angular/material/chips';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
+
 // import { MatFileUploadModule } from 'angular-material-fileupload';
 const material=[
   MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule,
   MatGridListModule,MatCardModule,MatFormFieldModule,MatSelectModule,MatInputModule,
   MatButtonToggleModule, MatMenuModule, MatTableModule,MatRadioModule,MatSlideToggleModule,
-  MatExpansionModule, MatChipsModule, 
+  MatExpansionModule, MatChipsModule, MaterialFileInputModule
 ];
 
 @NgModule({

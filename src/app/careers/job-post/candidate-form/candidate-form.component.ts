@@ -20,6 +20,7 @@ export class CandidateFormComponent implements OnInit {
         'email': [null, Validators.compose([Validators.required,Validators.email])],
         'phone':[null,Validators.required],
         'linkedIn':[null,Validators.required],
+        'file':[null],
         'validate':''
     });
 

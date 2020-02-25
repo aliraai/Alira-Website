@@ -14,6 +14,10 @@
             <mat-form-field>
                 <input type="text" matInput placeholder="LinkedIn" formControlName="linkedIn">
             </mat-form-field>
+            <mat-form-field>
+                <ngx-mat-file-input formControlName="file" placeholder="Resumé">
+                </ngx-mat-file-input>
+              </mat-form-field>
             <button mat-stroked-button class="btn" [disabled]="!rForm.valid">
                 Get Started
             </button>  

@@ -1,9 +1,14 @@
 .header{
-   // background-color: #64b;
-   background-color: #13f;
-   // background-image: url("../../../assets/img/home-page/banner.png");
-   // background-repeat: no-repeat;
-   color:#fff;
+    color:#fff;
+    position: relative;
+    background: #13f;
+    color: #FFF;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header > svg {
+    display: block;
 }
 
 .container{

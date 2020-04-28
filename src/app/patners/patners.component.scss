@@ -1,18 +1,26 @@
-mat-card{
-    width:25%;
+mat-card {
+  width: 25%;
 }
-.container, .mat-display-1{
-    background-color: white;
-    padding:3% 3%;
+
+.container,
+.mat-display-1 {
+  background-color: white;
+  padding: 5% 3%;
 }
-.mat-display-1{
-    margin: 0px;
+
+.mat-display-1 {
+  margin: 0px;
 }
-mat-card-title, mat-card-subtitle, mat-card-actions, mat-card-content h3{
-    text-align: center;
+
+mat-card-title,
+mat-card-subtitle,
+mat-card-actions,
+mat-card-content h3 {
+  text-align: center;
 }
-@media(max-width:700px){
-    mat-card{
-        width:80%;
-    }
+
+@media(max-width:700px) {
+  mat-card {
+    width: 80%;
+  }
 }

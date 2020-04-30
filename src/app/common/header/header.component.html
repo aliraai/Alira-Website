@@ -1,9 +1,8 @@
-
 <!-- Start of navbar-->
 <mat-toolbar class="navbar" [ngClass]="getClass()">
   <!--logo-->
-    <img class="logo" src={{path}} alt="alira_logo">
-  
+  <img class="logo" src={{path}} alt="alira_logo">
+
   <!--Navigation Links-->
   <div fxShow="true" fxHide.lt-md="true" class="buttons">
     <!--Home-->
@@ -13,13 +12,12 @@
     <!--Company-->
     <mat-menu #companyMenu="matMenu">
       <a routerLink="/patners" mat-menu-item disableRipple=true>Patners</a>
-      <a routerLink="/aboutUs" mat-menu-item disableRipple=true>About Us</a>
+      <a routerLink="/about-us" mat-menu-item disableRipple=true>About Us</a>
       <a routerLink="/contact" mat-menu-item disableRipple=true>Contact Us</a>
       <a routerLink="/events" mat-menu-item disableRipple=true>Events</a>
       <a routerLink="/careers" mat-menu-item disableRipple=true>Careers</a>
     </mat-menu>
-    <button mat-button [matMenuTriggerFor]="companyMenu"
-    disableRipple=true>
+    <button mat-button [matMenuTriggerFor]="companyMenu" disableRipple=true>
       Company
       <mat-icon>keyboard_arrow_down</mat-icon>
     </button>
@@ -30,16 +28,14 @@
       <a routerLink="/faq" mat-menu-item disableRipple=true>FAQ</a>
       <a routerLink="/help-desk" mat-menu-item disableRipple=true>Help Desk</a>
     </mat-menu>
-    <button mat-button [matMenuTriggerFor]="resourcesMenu"
-    disableRipple=true>
+    <button mat-button [matMenuTriggerFor]="resourcesMenu" disableRipple=true>
       Resources
       <mat-icon>keyboard_arrow_down</mat-icon>
     </button>
   </div>
 
   <div fxShow="true" fxHide.lt-md="true" class="buttons">
-    <button mat-flat-button class="btn"  
-       disableRipple=true>Get Started</button>
+    <button mat-flat-button class="btn" disableRipple=true>Get Started</button>
     <button mat-button disableRipple=true>Login</button>
   </div>
 
@@ -51,7 +47,7 @@
 </mat-toolbar>
 <!--end of navbar-->
 <!-- --------------------------------------------------------------------- -->
-  <!-- sidenav start -->
+<!-- sidenav start -->
 <mat-sidenav-container color="primary" fxFlexFill>
   <mat-sidenav #sidenav fxLayout="column" class="container" role="navigation" position="end">
     <div fxLayout="column">
@@ -63,16 +59,14 @@
       <a routerLink="/pricing" mat-button>Pricing</a>
       <a routerLink="/blog" mat-button>Blog</a>
       <a routerLink="/contact" mat-button>Contact</a>
-    
+
     </div>
     <div>
-      <button mat-flat-button color="primary" 
-        class="btn" disableRipple=true >Get Started</button>
+      <button mat-flat-button color="primary" class="btn" disableRipple=true>Get Started</button>
       <button mat-button disableRipple=true>Login</button>
     </div>
   </mat-sidenav>
-    <mat-sidenav-content fxFlexFill class="container-content">
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
+  <mat-sidenav-content fxFlexFill class="container-content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
 </mat-sidenav-container>
-

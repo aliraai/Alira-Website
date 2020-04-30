@@ -1,48 +1,31 @@
-.title{
-    text-align: center;
-    font-size: large;
-    line-height: 1em;
-}
-.contact-form{
-    padding:0% 10%;
-}    
-
-.container{
-    padding-left: 10%;
-    padding-top:2%;
-}
-.contact-info{
-    // border: 1px solid red;
-    padding:2em 5em;
+.title {
+  text-align: center;
+  font-size: large;
+  line-height: 1em;
 }
 
-.icons{
-    
+.contact-form {
+  padding: 0% 10%;
 }
 
-.info{
-    margin-top:2em;
+.card {
+  background-color: #8af;
+  height: 100%;
+  margin-left: 22.5em;
+  width: 50%;
+  //   color: #13f;
+  font-weight: bolder;
 }
-.card{
-    background-color: #64b;
-    color:white;    
-    height: 100%;
+
+.card-email {
+  //   background-color: saturate($color: #13f, $amount: 1);
+  width: 25%;
+  padding: 2em 0em;
+  margin-left: 22.5em;
 }
-.address{
-    // border:1px solid white;
-    width:15em;
-    padding-top:3em;
-    padding-bottom:3em;
-    padding-left:3em;
-    padding-right: 3em;
+
+.icons {
+  padding: 1em
 }
-.map-container{
-    // height: 300px;
-    // padding-bottom: 0.5em;
-    // padding-left: 1em;
-}
-@media(max-width:700px){
-    .contact-info{
-        padding:3em 5em;
-    }
-}
+
+@media(max-width:700px) {}

@@ -1,20 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { ContactDetails } from '../common/contact-details';
+import { Component, OnInit } from "@angular/core";
+import { ContactDetails } from "../common/contact-details";
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  selector: "app-contact",
+  templateUrl: "./contact.component.html",
+  styleUrls: ["./contact.component.scss"],
 })
 export class ContactComponent implements OnInit {
-  contact =new ContactDetails(); 
+  contact = new ContactDetails();
   phone = this.contact.getMobile();
   email = this.contact.getEmail();
   address = this.contact.getAddress();
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

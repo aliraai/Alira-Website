@@ -9,6 +9,7 @@ import { ContactComponent } from "./contact/contact.component";
 import { CareersComponent } from "./careers/careers.component";
 import { FaqComponent } from "./faq/faq.component";
 import { AboutUsComponent } from "./about-us/about-us.component";
+import { HelpDeskComponent } from "./help-desk/help-desk.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: "careers", component: CareersComponent },
   { path: "faq", component: FaqComponent },
   { path: "about-us", component: AboutUsComponent },
+  { path: "help-desk", component: HelpDeskComponent },
   { path: "**", component: ContactComponent },
 ];
 

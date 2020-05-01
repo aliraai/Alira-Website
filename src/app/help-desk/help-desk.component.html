@@ -1,1 +1,51 @@
-<p>help-desk works!</p>
+<div class="faq">
+  <div class="mat-display-1 center">
+    Help Desk
+  </div>
+</div>
+<div fxLayout="row">
+  <div fxFlex>
+    <div style="float:right;margin-right:10em">
+      <mat-expansion-panel style="width: 25em;">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Getting Started
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <a href=""></a>
+      </mat-expansion-panel>
+      <mat-expansion-panel style="width: 25em;">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Question Types
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <button mat-button>Dynamic Questions</button><br>
+        <mat-divider></mat-divider>
+        <button mat-button>URL Based Flow</button><br>
+        <mat-divider></mat-divider>
+        <button mat-button>Appointment Booking Setup</button><br>
+        <mat-divider></mat-divider>
+      </mat-expansion-panel>
+      <mat-expansion-panel style="width: 25em;">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Integrations
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <button mat-button onclick="changeValue()">Facebook Integration</button><br>
+        <mat-divider></mat-divider>
+        <button mat-button>Zapier Integration</button><br>
+        <mat-divider></mat-divider>
+        <button mat-button>Adwords Integration</button><br>
+        <mat-divider></mat-divider>
+      </mat-expansion-panel>
+    </div>
+
+  </div>
+  <div fxFlex>
+
+  </div>
+</div>
+<div style="padding: 2em;"></div>
+<app-social-band></app-social-band>

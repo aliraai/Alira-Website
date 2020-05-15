@@ -4,20 +4,12 @@
   </div>
   <div class="blog" fxLayout="row" *ngFor="let post of blog">
     <mat-card class="blog-card">
-      <img
-        mat-card-image
-        src="../../assets/img/blog/blog_python.jpg"
-        alt="Photo of a Shiba Inu"
-      />
+      <img mat-card-image src="../../assets/img/blog/blog_python.jpg" alt="Photo of a Shiba Inu" />
       <div class="date-box">
         <span> {{ post.date | date: "mediumDate" }} </span>
       </div>
       <div class="profile-box">
-        <button
-          mat-fab
-          matTooltip="{{ post.author }}"
-          matTooltipPosition="right"
-        >
+        <button mat-fab matTooltip="{{ post.author }}" matTooltipPosition="right">
           <mat-icon>person</mat-icon>
         </button>
       </div>
@@ -29,10 +21,11 @@
         <p class="excerpt">{{ post.excerpt }}</p>
       </mat-card-content>
       <mat-card-footer class="footer">
-        <a href="#" style="float: right;">
+        <a [routerLink]="['/post', post.id, post.slug]" style="float: right;">
           Read More
         </a>
       </mat-card-footer>
     </mat-card>
   </div>
 </div>
+<app-social-band></app-social-band>

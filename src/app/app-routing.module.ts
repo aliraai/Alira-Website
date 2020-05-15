@@ -16,6 +16,12 @@ const routes: Routes = [
   { path: "patners", component: PatnersComponent },
   { path: "pricing", component: PricingComponent },
   { path: "blog", component: BlogComponent },
+  {
+    path: "post/:id/:slug",
+    loadChildren: () =>
+      import("./blog/post/post.module").then((m) => m.PostModule),
+    data: { routeState: 3 },
+  },
   { path: "contact", component: ContactComponent },
   { path: "careers", component: CareersComponent },
   { path: "faq", component: FaqComponent },

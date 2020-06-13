@@ -9,8 +9,10 @@ import { Observable } from "rxjs";
 })
 export class BlogComponent implements OnInit {
   blogs$: Observable<Iblog[]> = this.blogsService.blogs$;
-
-  constructor(private blogsService: BlogService) {}
+  recentBlogs = this.blogsService.getRecentPosts();
+  constructor(private blogsService: BlogService) {
+    console.log(this.recentBlogs);
+  }
 
   trackById(index, item) {
     return item.id;

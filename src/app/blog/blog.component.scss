@@ -13,8 +13,9 @@
 }
 
 .blog {
-  padding: 3em 5em;
-  overflow-x: auto;
+  padding: 3em 6em;
+
+  // overflow-x: auto;
 }
 
 .header {
@@ -52,4 +53,13 @@
 
 .footer {
   padding: 2em;
+}
+
+.card-img {
+  width: 50%;
+  float: left;
+}
+
+.tags {
+  padding: 0em 3em
 }

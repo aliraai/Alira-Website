@@ -2,11 +2,11 @@
   <div class="mat-display-1 center">
     Blog
   </div>
-  <div fxLayout="column">
-    <div fxFlex>
+  <div fxLayout="row" fxLayout.lt-md="column">
+    <div fxFlex="60">
       <div class="blog" fxLayout="row" *ngFor="let post of blogs$ | async;trackBy:trackById">
         <mat-card class="blog-card">
-          <img mat-card-image src="../../assets/img/blog/blog_python.jpg" alt="Photo of a Shiba Inu" />
+          <img mat-card-image src="../../assets/img/blog/blog_python.jpg" />
           <div class="date-box">
             <span> {{ post.date | date: "mediumDate" }} </span>
           </div>
@@ -30,8 +30,37 @@
         </mat-card>
       </div>
     </div>
-    <div fxFlex>
-      This is here
+    <div fxFlex="40">
+      <div style="padding-top: 2em; padding-right:2em">
+        <p class="mat-title" style="text-align: center;">Recent Post</p>
+        <!-- -----------------Recent Post-------------------------- -->
+        <mat-grid-list cols="2" rowHeight="2:1" *ngFor="let post of recentBlogs">
+          <mat-grid-tile>
+            <img src="../../assets/img/blog/blog_python.jpg" width="70%" />
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <div>
+              <a [routerLink]="['/post', post.id, post.slug]">
+                {{post.title}}
+              </a>
+              <p>{{ post.date | date: "mediumDate" }} </p>
+            </div>
+          </mat-grid-tile>
+        </mat-grid-list>
+        <!-- ------------------------------------------ -->
+        <!-- -----------Popular Tags--------- -->
+        <p class="mat-title" style="text-align: center;padding-top:2em">Popular tags</p>
+        <div class="tags">
+          <mat-chip-list>
+            <mat-chip>Home</mat-chip>
+            <mat-chip>Pricing</mat-chip>
+            <mat-chip>Contact Us</mat-chip>
+            <mat-chip>FAQ</mat-chip>
+          </mat-chip-list>
+        </div>
+        <!-- ------------------------------------------ -->
+
+      </div>
     </div>
   </div>
 </div>

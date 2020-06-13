@@ -33,20 +33,23 @@ export class BlogService {
     },
     {
       id: 2,
-      title: "blog2",
+      title: "How To Create An Arabic Chatbot Using Alira",
       content: "content2",
       date: new Date("2/2/2020"),
       slug: "blog2",
-      excerpt: "content2",
+      excerpt:
+        "By now you might have read tens of blogs on “How to create a chatbot” and multiple of its variations.",
       author: "admin",
     },
     {
       id: 3,
-      title: "blog3",
+      title:
+        "How To Create A WhatsApp Business Account And Connect It To Chatbot",
       content: "content2",
       date: new Date("2/2/2020"),
       slug: "blog3",
-      excerpt: "content2",
+      excerpt:
+        "The most preferred way of communication for most people these days is messaging. ",
       author: "admin",
     },
     {
@@ -78,5 +81,8 @@ export class BlogService {
     const index = this.blogs.findIndex((b) => b.id === +id);
     // console.log(typeof id);
     return this.blogs[index];
+  }
+  getRecentPosts() {
+    return this.blogs.slice(0, 3);
   }
 }

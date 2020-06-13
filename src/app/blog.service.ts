@@ -9,6 +9,7 @@ export interface Iblog {
   slug: string;
   excerpt: string;
   author: string;
+  tags?: string[];
 }
 
 function generateId() {

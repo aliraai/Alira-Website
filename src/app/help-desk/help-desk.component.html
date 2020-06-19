@@ -5,52 +5,37 @@
 </div>
 <div fxLayout="row">
   <div fxFlex>
-    <div style="float:right;margin-right:10em">
-      <mat-expansion-panel style="width: 25em;">
+    <div style="float:left;margin-left:10em;margin-bottom: 5em;">
+      <mat-expansion-panel style="width: 25em;box-shadow: none;" *ngFor="let header of headers">
         <mat-expansion-panel-header>
           <mat-panel-title>
-            Getting Started
+            {{header}}
           </mat-panel-title>
         </mat-expansion-panel-header>
-        <button mat-button>Dynamic Questions</button><br>
-        <mat-divider></mat-divider>
-        <button mat-button>URL Based Flow</button><br>
-        <mat-divider></mat-divider>
-        <button mat-button>Appointment Booking Setup</button><br>
-        <mat-divider></mat-divider>
-      </mat-expansion-panel>
-      <mat-expansion-panel style="width: 25em;">
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Question Types
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <button mat-button>Dynamic Questions</button><br>
-        <mat-divider></mat-divider>
-        <button mat-button>URL Based Flow</button><br>
-        <mat-divider></mat-divider>
-        <button mat-button>Appointment Booking Setup</button><br>
-        <mat-divider></mat-divider>
-      </mat-expansion-panel>
-      <mat-expansion-panel style="width: 25em;">
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Integrations
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <button mat-button onclick="changeValue()">Facebook Integration</button><br>
-        <mat-divider></mat-divider>
-        <button mat-button>Zapier Integration</button><br>
-        <mat-divider></mat-divider>
-        <button mat-button>Adwords Integration</button><br>
-        <mat-divider></mat-divider>
+        <div *ngFor="let post of helpDesk$ | async;trackBy:trackById">
+          <div *ngIf='header===post.header'>
+            <button mat-button [routerLink]="['/help-desk', post.id, post.question]">
+              {{post.question}} </button>
+          </div>
+        </div>
       </mat-expansion-panel>
     </div>
-
   </div>
-  <div fxFlex>
+  <div fxFlex style="margin-right:5em; width:50%;float:right;">
+    <div *ngIf='flag; else el'>
+      {{helpDesk.intro}}
+      <div *ngFor="let soln of helpDesk.solution;let i = index" class="solution">
+        <!-- <span class="icon"> {{i}}</span> -->
+        <mat-icon aria-hidden="false" aria-label="Example home icon">keyboard_arrow_right</mat-icon>
 
+        {{soln}}
+      </div>
+      <!-- {{helpDesk.solution}} -->
+    </div>
+    <ng-template #el>
+      Select from Left your query
+    </ng-template>
   </div>
 </div>
 <div style="padding: 2em;"></div>
-<app-social-band></app-social-band>
+<!-- <app-social-band></app-social-band> -->

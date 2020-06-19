@@ -24,9 +24,21 @@ const routes: Routes = [
   },
   { path: "contact", component: ContactComponent },
   { path: "careers", component: CareersComponent },
+  {
+    path: "job-post/:id/",
+    loadChildren: () =>
+      import("./careers/job-post/job-post.module").then((m) => m.JobPostModule),
+    data: { routeState: 3 },
+  },
   { path: "faq", component: FaqComponent },
   { path: "about-us", component: AboutUsComponent },
   { path: "help-desk", component: HelpDeskComponent },
+  {
+    path: "help-desk/:id/:question",
+    loadChildren: () =>
+      import("./help-desk/help-desk.module").then((m) => m.HelpDeskModule),
+    data: { routeState: 3 },
+  },
   { path: "**", component: ContactComponent },
 ];
 

@@ -17,11 +17,13 @@
     <div fxFlex style="padding:0em 8em">
       <mat-grid-list cols="3" rowHeight="2:1">
         <mat-grid-tile *ngFor="let job of jobs$ | async;trackBy:trackById">
-          <mat-card class="job-card" *ngIf="job.active">
-            <mat-card-subtitle> {{job.department}} </mat-card-subtitle>
-            <mat-card-title> {{job.designation}} </mat-card-title>
-            <mat-card-footer> {{job.opening}} openings</mat-card-footer>
-          </mat-card>
+          <a [routerLink]="['/job-post', job.id]">
+            <mat-card class="job-card" *ngIf="job.active">
+              <mat-card-subtitle> {{job.department}} </mat-card-subtitle>
+              <mat-card-title> {{job.designation}} </mat-card-title>
+              <mat-card-footer> {{job.opening}} openings</mat-card-footer>
+            </mat-card>
+          </a>
         </mat-grid-tile>
       </mat-grid-list>
     </div>

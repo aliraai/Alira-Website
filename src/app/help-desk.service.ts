@@ -81,6 +81,6 @@ export class HelpDeskService {
     return this.helpDeskArray[index];
   }
   getHeaders() {
-    return ["Question Types", "Integration", "Getting Started"];
+    return ["Getting Started", "Question Types", "Integration"];
   }
 }

@@ -1,16 +1,33 @@
-.heading{
-    padding:2em 4em;
+.heading {
+  padding: 3em 4em;
 }
-.mat-h4{
-    margin-bottom:0em;
-    font-variant: small-caps;
+
+.center {
+  text-align: center;
 }
-.post{
-    padding: 0em 10em;
+
+.mat-h4 {
+  margin-bottom: 0em;
+  font-variant: small-caps;
 }
-.chips{
-    padding-bottom: 2em;
+
+.post {
+  padding: 0em 10em;
 }
-.form{
-    padding: 0em 15em 2em;
+
+.chips {
+  padding-bottom: 2em;
+}
+
+.form {
+  padding: 0em 15em 2em;
+}
+
+.border {
+  border: 1px solid black;
+  //   float: right;
+}
+
+mat-form-field {
+  width: 300px;
 }

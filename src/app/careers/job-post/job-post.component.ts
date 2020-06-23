@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { CareerService } from "src/app/career.service";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 @Component({
   selector: "app-job-post",
@@ -9,40 +10,40 @@ import { CareerService } from "src/app/career.service";
 })
 export class JobPostComponent implements OnInit {
   post;
+  //form
+  rForm: FormGroup;
+  job: any;
+  name: string = "";
+  email: string = "";
+  phone: string = "";
+  linkedIn: string = "";
 
-  department = "Creative & Design at Alira";
-  job = "Web Designer";
-  description = `A web designer creates the look, layout, and features of a website. 
-  The job involves understanding both graphic design and computer programming. 
-  Once a website is created, a designer helps with maintenance and additions to the website. 
-  They work with development teams or managers for keeping the site up-to-date and prioritizing 
-  needs, among other tasks.`;
-  responsibilities = [
-    "Writing and editing content",
-    "Designing webpage layout",
-    "Determining technical requirements",
-    "Updating websites",
-    "Creating back up files",
-    "Solving code problems",
-  ];
-  skills = [
-    "HTML CSS, JAVA SCRIPT",
-    "HTML5,CSS3,JQUERY,BOOTSTRAP",
-    "PHOTOSHOP",
-    "CORALDRAW",
-    "ILLUSTRATOR",
-  ];
-  experience = "0 - 3yrs";
-  minSalary = 15000;
-  maxSalary = 20000;
   constructor(
     private route: ActivatedRoute,
-    private careerService: CareerService
-  ) {}
+    private careerService: CareerService,
+    private fb: FormBuilder
+  ) {
+    this.rForm = fb.group({
+      name: [null, Validators.required],
+      email: [
+        null,
+        Validators.compose([Validators.required, Validators.email]),
+      ],
+      phone: [null, Validators.required],
+      linkedIn: [null, Validators.required],
+      file: [null],
+      validate: "",
+    });
+  }
+  addPost(job) {
+    console.log(job.name);
+  }
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       console.log("params received: ", params);
+      this.post = this.careerService.getJob(params.id);
+      // console.log(this.post);
     });
   }
 }

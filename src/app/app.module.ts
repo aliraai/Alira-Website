@@ -10,7 +10,7 @@ import { PatnersComponent } from "./patners/patners.component";
 import { PricingComponent } from "./pricing/pricing.component";
 import { BlogComponent } from "./blog/blog.component";
 import { ContactComponent } from "./contact/contact.component";
-import { CareersComponent } from "./careers/careers.component";
+// import { CareersComponent } from "./careers/careers.component";
 import { FaqComponent } from "./faq/faq.component";
 // import { HelpDeskComponent } from "./help-desk/help-desk.component";
 import { EventsComponent } from "./events/events.component";
@@ -28,10 +28,9 @@ import { HeaderSectionComponent } from "./home/header-section/header-section.com
 import { ProductSectionComponent } from "./home/product-section/product-section.component";
 import { ProjectSectionComponent } from "./home/project-section/project-section.component";
 import { PlanTableComponent } from "./pricing/plan-table/plan-table.component";
-// import { JobPostComponent } from "./careers/job-post/job-post.component";
-// import { CandidateFormComponent } from "./careers/job-post/candidate-form/candidate-form.component";
 import { AboutUsComponent } from "./about-us/about-us.component";
-import { SignupComponent } from './common/signup/signup.component';
+import { SignupComponent } from "./common/signup/signup.component";
+import { CareersComponent } from "./careers/careers.component";
 
 @NgModule({
   declarations: [
@@ -40,7 +39,7 @@ import { SignupComponent } from './common/signup/signup.component';
     PricingComponent,
     BlogComponent,
     ContactComponent,
-    CareersComponent,
+    // CareersComponent,
     FaqComponent,
     // HelpDeskComponent,
     EventsComponent,
@@ -55,10 +54,9 @@ import { SignupComponent } from './common/signup/signup.component';
     ProductSectionComponent,
     ProjectSectionComponent,
     PlanTableComponent,
-    // JobPostComponent,
-    // CandidateFormComponent,
     AboutUsComponent,
     SignupComponent,
+    CareersComponent,
   ],
   imports: [
     BrowserModule,

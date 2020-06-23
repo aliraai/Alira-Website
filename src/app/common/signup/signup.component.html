@@ -1,0 +1,68 @@
+<div class="container-fluid">
+  <div class="mat-display-1 center">
+    Sign Up!
+  </div>
+  <div class="stepper">
+    <mat-horizontal-stepper>
+      <ng-template matStepperIcon="edit" let-index="index">
+        {{ index + 1 }}
+      </ng-template>
+      <mat-step>
+        <form [formGroup]="formGroup">
+          <mat-form-field>
+            <mat-label>Type of Partner</mat-label>
+            <mat-select>
+              <mat-option>Referer</mat-option>
+              <mat-option>Agency</mat-option>
+              <mat-option>Reseller</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br />
+          <mat-form-field>
+            <mat-label>Type of Plan</mat-label>
+            <mat-select>
+              <mat-option>Free</mat-option>
+              <mat-option>Starter</mat-option>
+              <mat-option>Premier</mat-option>
+              <mat-option>Enterprise</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br />
+          <mat-form-field>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              matInput
+              placeholder="Enter email"
+          /></mat-form-field>
+          <br />
+          <mat-form-field>
+            <input
+              type="text"
+              name="website"
+              id="website"
+              matInput
+              placeholder="Website URL"
+          /></mat-form-field>
+          <br />
+          <mat-form-field>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              matInput
+              placeholder="Password"
+          /></mat-form-field>
+          <br />
+          <!-- <mat-form-field>
+            <input type="checkbox" name="agreement" id="agreement" matInput />I
+            agree to the terms and conditions</mat-form-field
+          >
+          <br /> -->
+          <br />
+        </form>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+</div>

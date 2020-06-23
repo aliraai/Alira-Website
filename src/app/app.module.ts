@@ -31,6 +31,7 @@ import { PlanTableComponent } from "./pricing/plan-table/plan-table.component";
 // import { JobPostComponent } from "./careers/job-post/job-post.component";
 // import { CandidateFormComponent } from "./careers/job-post/candidate-form/candidate-form.component";
 import { AboutUsComponent } from "./about-us/about-us.component";
+import { SignupComponent } from './common/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { AboutUsComponent } from "./about-us/about-us.component";
     // JobPostComponent,
     // CandidateFormComponent,
     AboutUsComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,

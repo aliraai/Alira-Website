@@ -10,6 +10,7 @@ import { CareersComponent } from "./careers/careers.component";
 import { FaqComponent } from "./faq/faq.component";
 import { AboutUsComponent } from "./about-us/about-us.component";
 import { HelpDeskComponent } from "./help-desk/help-desk.component";
+import { SignupComponent } from "./common/signup/signup.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -39,6 +40,7 @@ const routes: Routes = [
       import("./help-desk/help-desk.module").then((m) => m.HelpDeskModule),
     data: { routeState: 3 },
   },
+  { path: "signup", component: SignupComponent },
   { path: "**", component: ContactComponent },
 ];
 

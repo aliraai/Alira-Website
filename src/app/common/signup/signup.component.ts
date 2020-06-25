@@ -1,32 +1,49 @@
 import { Component, OnInit } from "@angular/core";
+import { ErrorStateMatcher } from "@angular/material";
 import {
-  FormBuilder,
-  FormGroup,
-  Validators,
   FormControl,
+  FormGroupDirective,
+  Validators,
+  NgForm,
 } from "@angular/forms";
-import { MAT_STEPPER_GLOBAL_OPTIONS } from "@angular/cdk/stepper";
+
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(
+    control: FormControl | null,
+    form: FormGroupDirective | NgForm | null
+  ): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(
+      control &&
+      control.invalid &&
+      (control.dirty || control.touched || isSubmitted)
+    );
+  }
+}
 
 @Component({
   selector: "app-signup",
   templateUrl: "./signup.component.html",
   styleUrls: ["./signup.component.scss"],
-  providers: [
-    {
-      provide: MAT_STEPPER_GLOBAL_OPTIONS,
-      useValue: { displayDefaultIndicatorType: false },
-    },
-  ],
 })
 export class SignupComponent implements OnInit {
-  interests = [];
+  emailFormControl = new FormControl("", [
+    Validators.required,
+    Validators.email,
+  ]);
+  nameFormControl = new FormControl("", Validators.required);
+  passwordFormControl = new FormControl("", [
+    Validators.required,
+    Validators.minLength(6),
+    Validators.maxLength(10),
+    Validators.pattern("[a-zA-Z0-9]*_"),
+  ]);
+  officeNumberFormControl = new FormControl("", Validators.pattern("[0-9]*"));
+  mobileNumberFormControl = new FormControl("", Validators.pattern("[0-9]*"));
+  matcher = new MyErrorStateMatcher();
+  selected = "Free";
+  favoriteSeason: string;
+  seasons: string[] = ["Monthly", "6 Months", "Yearly"];
 
-  formGroup = new FormGroup({ secondCtrl: new FormControl("") });
-  ngOnInit() {
-    this.interests = [
-      { value: "reading", viewValue: "Reading" },
-      { value: "swimming", viewValue: "Swimming" },
-      { value: "cycling", viewValue: "Cycling" },
-    ];
-  }
+  ngOnInit() {}
 }

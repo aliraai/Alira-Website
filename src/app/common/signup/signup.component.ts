@@ -5,6 +5,7 @@ import {
   FormGroupDirective,
   Validators,
   NgForm,
+  FormGroup,
 } from "@angular/forms";
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -27,17 +28,10 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ["./signup.component.scss"],
 })
 export class SignupComponent implements OnInit {
-  emailFormControl = new FormControl("", [
-    Validators.required,
-    Validators.email,
-  ]);
-  nameFormControl = new FormControl("", Validators.required);
-  passwordFormControl = new FormControl("", [
-    Validators.required,
-    Validators.minLength(6),
-    Validators.maxLength(10),
-    Validators.pattern("[a-zA-Z0-9]*_"),
-  ]);
+  personalDetails: FormGroup;
+  planDetails: FormGroup;
+  // nameFormControl = new FormControl("", Validators.required);
+
   officeNumberFormControl = new FormControl("", Validators.pattern("[0-9]*"));
   mobileNumberFormControl = new FormControl("", Validators.pattern("[0-9]*"));
   matcher = new MyErrorStateMatcher();
@@ -45,5 +39,29 @@ export class SignupComponent implements OnInit {
   favoriteSeason: string;
   seasons: string[] = ["Monthly", "6 Months", "Yearly"];
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.personalDetails = new FormGroup({
+      emailFormControl: new FormControl("", [
+        Validators.required,
+        Validators.email,
+      ]),
+      nameFormControl: new FormControl("", Validators.required),
+      passwordFormControl: new FormControl("", [
+        Validators.required,
+        Validators.minLength(6),
+        Validators.maxLength(10),
+        Validators.pattern("\\w"),
+      ]),
+    });
+    this.planDetails = new FormGroup({
+      planFormControl: new FormControl(""),
+      periodFormControl: new FormControl(""),
+    });
+  }
+
+  formSubmitted() {
+    console.log("submitted");
+    var email = this.personalDetails.get("email");
+    console.log(email);
+  }
 }

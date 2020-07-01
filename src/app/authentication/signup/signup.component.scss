@@ -1,0 +1,34 @@
+.container-fluid {
+  margin-top: 3em;
+}
+
+.center {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.period-radio-group {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+
+}
+
+.period-radio-button {
+  margin: 5px;
+}
+
+.stepper {
+  // border: 1px solid black;
+  width: 50%;
+  margin-left: 30%;
+}
+
+
+.full-width {
+  width: 70%;
+}
+
+.btn {
+  float: right;
+}

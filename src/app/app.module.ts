@@ -10,9 +10,7 @@ import { PatnersComponent } from "./patners/patners.component";
 import { PricingComponent } from "./pricing/pricing.component";
 import { BlogComponent } from "./blog/blog.component";
 import { ContactComponent } from "./contact/contact.component";
-// import { CareersComponent } from "./careers/careers.component";
 import { FaqComponent } from "./faq/faq.component";
-// import { HelpDeskComponent } from "./help-desk/help-desk.component";
 import { EventsComponent } from "./events/events.component";
 import { SearchComponent } from "./search/search.component";
 import { MaterialModule } from "./material/material.module";
@@ -29,8 +27,8 @@ import { ProductSectionComponent } from "./home/product-section/product-section.
 import { ProjectSectionComponent } from "./home/project-section/project-section.component";
 import { PlanTableComponent } from "./pricing/plan-table/plan-table.component";
 import { AboutUsComponent } from "./about-us/about-us.component";
-import { SignupComponent } from "./common/signup/signup.component";
 import { CareersComponent } from "./careers/careers.component";
+import { AuthenticationModule } from "./authentication/authentication.module";
 
 @NgModule({
   declarations: [
@@ -39,9 +37,7 @@ import { CareersComponent } from "./careers/careers.component";
     PricingComponent,
     BlogComponent,
     ContactComponent,
-    // CareersComponent,
     FaqComponent,
-    // HelpDeskComponent,
     EventsComponent,
     SearchComponent,
     HomeComponent,
@@ -55,7 +51,6 @@ import { CareersComponent } from "./careers/careers.component";
     ProjectSectionComponent,
     PlanTableComponent,
     AboutUsComponent,
-    SignupComponent,
     CareersComponent,
   ],
   imports: [
@@ -68,6 +63,7 @@ import { CareersComponent } from "./careers/careers.component";
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
+    AuthenticationModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

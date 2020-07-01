@@ -1,0 +1,147 @@
+<div class="container-fluid">
+  <div class="mat-display-1 center">
+    Sign Up!
+  </div>
+  <!-- linear -->
+  <div class="stepper">
+    <mat-horizontal-stepper>
+      <mat-step label="profile" [stepControl]="profileForm">
+        <form [formGroup]="profileForm">
+          <div>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Name" formControlName="name">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Email" formControlName="email">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="full-width">
+              <input matInput type="password" placeholder="Password" formControlName="password">
+            </mat-form-field>
+          </div>
+          <div class="btn">
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step label="plan" [stepControl]="typeForm">
+        <form [formGroup]="typeForm">
+          <!-- Pricing / NavBar -->
+          <div *ngIf="from=='nav-bar' || from=='pricing' || from=='default'">
+            <!-- drop-down -->
+            <!-- <div *ngIf="from=='pricing'">{{this.period}}</div> -->
+            <mat-form-field class="full-width">
+              <mat-label>Select Plan</mat-label>
+              <mat-select [(value)]="selectedPlan" formControlName="type">
+                <mat-option value="free">Free</mat-option>
+                <mat-option value="starter">Starter</mat-option>
+                <mat-option value="premier">Premier</mat-option>
+                <mat-option value="enterprise">Enterprise</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <!-- radio button  -->
+            <div *ngIf="selectedPlan == 'starter' || selectedPlan == 'premier'">
+              <label id="example-radio-group-label">Subscribition Time</label>
+              <mat-radio-group [(ngModel)]="selectedPeriod" formControlName="time" class="period-radio-group">
+                <mat-radio-button class="period-radio-button" value="monthly">Monthly</mat-radio-button>
+                <mat-radio-button class="period-radio-button" value="6months">6 Months</mat-radio-button>
+                <mat-radio-button class="period-radio-button" value="yearly">Yearly</mat-radio-button>
+              </mat-radio-group>
+            </div>
+            <!-- information  -->
+            <!-- cost  -->
+            <div *ngIf="selectedPlan=='starter' || selectedPlan=='premier' || selectedPlan=='enterprise'">
+              Cost:
+              <span *ngIf="selectedPlan == 'starter'">
+                <span *ngIf="selectedPeriod == 'monthly'">₹1800</span>
+                <span *ngIf="selectedPeriod == '6months'">₹1600</span>
+                <span *ngIf="selectedPeriod == 'yearly'">₹1400</span>
+              </span>
+              <span *ngIf="selectedPlan == 'premier'">
+                <span *ngIf="selectedPeriod == 'monthly'">₹5500</span>
+                <span *ngIf="selectedPeriod == '6months'">₹5000</span>
+                <span *ngIf="selectedPeriod == 'yearly'">₹4700</span>
+              </span>
+              <span *ngIf="selectedPlan == 'enterprise'">Custom</span>
+            </div>
+            <!-- features -->
+            <p>
+              Number of bots:
+              <span *ngIf="selectedPlan == 'free'">1</span>
+              <span *ngIf="selectedPlan == 'starter'">5</span>
+              <span *ngIf="selectedPlan == 'premier'">10</span>
+              <span *ngIf="selectedPlan == 'enterprise'">Unlimited</span>
+            </p>
+            <p>
+              Number of chats:
+              <span *ngIf="selectedPlan == 'free'">100/Month</span>
+              <span *ngIf="selectedPlan == 'starter'">100/Month</span>
+              <span *ngIf="selectedPlan == 'premier'">500/Month</span>
+              <span *ngIf="selectedPlan == 'enterprise'">100/Month</span>
+            </p>
+            <p *ngIf="selectedPlan == 'premier' || selectedPlan == 'enterprise'">
+              Extra Features:
+            </p>
+            <ul>
+              <li *ngIf="selectedPlan == 'enterprise'">Multi Lang Support</li>
+              <li *ngIf="selectedPlan == 'enterprise'">Auto Email Follow Up</li>
+              <li *ngIf="selectedPlan == 'enterprise'">Auto Email Follow Up</li>
+              <li *ngIf="selectedPlan == 'enterprise'">Facebook Support</li>
+              <li *ngIf="selectedPlan == 'enterprise'">CRM Integration</li>
+              <li *ngIf="selectedPlan == 'enterprise'">Lead Notification</li>
+              <li *ngIf="selectedPlan == 'enterprise'">FAQs</li>
+              <li *ngIf="selectedPlan == 'enterprise' || selectedPlan == 'premier'">
+                Retrainable AI Bot
+              </li>
+            </ul>
+
+          </div>
+          <div *ngIf="from=='patners'">
+            <mat-form-field class="full-width">
+              <mat-label>Select Plan</mat-label>
+              <mat-select [(value)]="selectedPlan" formControlName="type">
+                <mat-option value="referer">Referer</mat-option>
+                <mat-option value="agency">Agency</mat-option>
+                <mat-option value="reseller">Reseller</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="btn">
+            <button mat-button matStepperPrevious>Previous </button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step label="company profile" [stepControl]="companyForm">
+        <form [formGroup]="companyForm">
+          <div>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Company Name" formControlName="companyName">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Website URL" formControlName="websiteUrl">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Contact Number" formControlName="contactNo">
+            </mat-form-field>
+          </div>
+          <div class="btn">
+            <button mat-button matStepperPrevious>Previous</button>
+            <button mat-button (click)="submit()" matStepperNext>Submit</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        done!
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+
+</div>

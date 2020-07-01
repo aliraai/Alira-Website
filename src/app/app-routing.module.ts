@@ -10,7 +10,8 @@ import { CareersComponent } from "./careers/careers.component";
 import { FaqComponent } from "./faq/faq.component";
 import { AboutUsComponent } from "./about-us/about-us.component";
 import { HelpDeskComponent } from "./help-desk/help-desk.component";
-import { SignupComponent } from "./common/signup/signup.component";
+import { SignupComponent } from "./authentication/signup/signup.component";
+import { SigninComponent } from "./authentication/signin/signin.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -41,6 +42,7 @@ const routes: Routes = [
     data: { routeState: 3 },
   },
   { path: "signup", component: SignupComponent },
+  { path: "signin", component: SigninComponent },
   { path: "**", component: ContactComponent },
 ];
 

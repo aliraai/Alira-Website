@@ -17,10 +17,12 @@
           </ul>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-flat-button color="primary" disableRipple=true>Get Started</button>
+          <!-- <button mat-flat-button color="primary" disableRipple=true (click)="navigateToSignUpPage('referer')>Get Started</button> -->
+          <button mat-flat-button color="primary" disableRipple=true (click)="navigateToSignUpPage('referer')">Get
+            Started</button>
         </mat-card-actions>
       </mat-card>
-      <mat-card class="child-2" fxFlex="1 1 auto">
+      <mat-card class=" child-2" fxFlex="1 1 auto">
         <mat-card-title>Agency</mat-card-title>
         <mat-card-subtitle>(Digital Marketing/Web Development Agencies)</mat-card-subtitle>
         <mat-card-content>
@@ -33,7 +35,9 @@
           </ul>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-flat-button color="primary" disableRipple=true>Get Started</button>
+          <!-- <button mat-flat-button color="primary" disableRipple=true>Get Started</button> -->
+          <button mat-flat-button color="primary" disableRipple=true (click)="navigateToSignUpPage('agency')">Get
+            Started</button>
         </mat-card-actions>
       </mat-card>
       <mat-card class="child-3" fxFlex="1 1 auto">
@@ -49,7 +53,8 @@
           </ul>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-flat-button color="primary" disableRipple=true>Get Started</button>
+          <button mat-flat-button color="primary" disableRipple=true (click)="navigateToSignUpPage('reseller')">Get
+            Started</button>
         </mat-card-actions>
       </mat-card>
     </div>

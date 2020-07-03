@@ -4,7 +4,7 @@ import { SignupComponent } from "./signup/signup.component";
 import { SigninComponent } from "./signin/signin.component";
 import { MaterialModule } from "../material/material.module";
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [SignupComponent, SigninComponent],
@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from "@angular/forms";
     MaterialModule,
     FlexLayoutModule,
     ReactiveFormsModule,
+    FormsModule,
   ],
 })
 export class AuthenticationModule {}

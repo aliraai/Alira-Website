@@ -22,7 +22,20 @@ function generateId() {
   providedIn: "root",
 })
 export class UserService {
-  users: IUser[] = [];
+  users: IUser[] = [
+    {
+      id: generateId(),
+      name: "Harry Potter",
+      email: "harry@gmail.com",
+      password: "ginny@2020",
+      plan: "free",
+      cost: 0,
+      time: "monthly",
+      companyName: "Lily James",
+      websiteURL: "lilyJames.com",
+      contactNo: "+91987654321",
+    },
+  ];
   constructor() {}
   addUser(user: IUser) {
     this.users.push(user);
@@ -38,5 +51,14 @@ export class UserService {
     this.users.forEach((ele) => {
       console.log(ele.name);
     });
+  }
+  checkUser(email, password): boolean {
+    var status = false;
+    this.users.forEach((user) => {
+      if (user.email === email && user.password === password) {
+        status = true;
+      }
+    });
+    return status;
   }
 }

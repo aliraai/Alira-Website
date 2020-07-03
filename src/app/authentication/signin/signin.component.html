@@ -1,1 +1,38 @@
-<p>signin works!</p>
+<div class="container-fluid">
+  <div class="mat-display-1 center">
+    Sign In!
+  </div>
+  <!-- <mat-card> -->
+  <!-- <mat-card-title>Login</mat-card-title> -->
+  <div class="login-form">
+    <form>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your email</mat-label>
+          <input matInput #email>
+          <mat-icon matSuffix>alternate_email</mat-icon>
+        </mat-form-field>
+      </div>
+      <div>
+        <!-- <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field> -->
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" #password>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-button (click)='login(email,password)'>Login</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- </mat-card> -->
+</div>

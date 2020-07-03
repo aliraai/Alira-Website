@@ -53,7 +53,8 @@
             </div>
             <!-- information  -->
             <!-- cost  -->
-            <div *ngIf="selectedPlan=='starter' || selectedPlan=='premier' || selectedPlan=='enterprise'">
+            <div
+              *ngIf="(selectedPlan=='starter' || selectedPlan=='premier' || selectedPlan=='enterprise') && (selectedPeriod!='none')">
               Cost:
               <span *ngIf="selectedPlan == 'starter'">
                 <span *ngIf="selectedPeriod == 'monthly'">₹1800</span>
@@ -68,20 +69,22 @@
               <span *ngIf="selectedPlan == 'enterprise'">Custom</span>
             </div>
             <!-- features -->
-            <p>
-              Number of bots:
-              <span *ngIf="selectedPlan == 'free'">1</span>
-              <span *ngIf="selectedPlan == 'starter'">5</span>
-              <span *ngIf="selectedPlan == 'premier'">10</span>
-              <span *ngIf="selectedPlan == 'enterprise'">Unlimited</span>
-            </p>
-            <p>
-              Number of chats:
-              <span *ngIf="selectedPlan == 'free'">100/Month</span>
-              <span *ngIf="selectedPlan == 'starter'">100/Month</span>
-              <span *ngIf="selectedPlan == 'premier'">500/Month</span>
-              <span *ngIf="selectedPlan == 'enterprise'">100/Month</span>
-            </p>
+            <div *ngIf="selectedPeriod!='none'">
+              <p>
+                Number of bots:
+                <span *ngIf="selectedPlan == 'free'">1</span>
+                <span *ngIf="selectedPlan == 'starter'">5</span>
+                <span *ngIf="selectedPlan == 'premier'">10</span>
+                <span *ngIf="selectedPlan == 'enterprise'">Unlimited</span>
+              </p>
+              <p>
+                Number of chats:
+                <span *ngIf="selectedPlan == 'free'">100/Month</span>
+                <span *ngIf="selectedPlan == 'starter'">100/Month</span>
+                <span *ngIf="selectedPlan == 'premier'">500/Month</span>
+                <span *ngIf="selectedPlan == 'enterprise'">100/Month</span>
+              </p>
+            </div>
             <p *ngIf="selectedPlan == 'premier' || selectedPlan == 'enterprise'">
               Extra Features:
             </p>

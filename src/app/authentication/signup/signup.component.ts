@@ -3,6 +3,7 @@ import { ActivatedRoute } from "@angular/router";
 import { Observable } from "rxjs";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { UserService, IUser } from "src/app/user.service";
+import { PricingService } from "src/app/pricing.service";
 
 function generateId() {
   return Math.floor(Math.random() * 1000);
@@ -19,7 +20,7 @@ export class SignupComponent implements OnInit {
   period;
   type;
   selectedPlan;
-  selectedPeriod;
+  selectedPeriod = "none";
   profileForm: FormGroup;
   typeForm: FormGroup;
   companyForm: FormGroup;
@@ -27,7 +28,8 @@ export class SignupComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private fb: FormBuilder,
-    private userService: UserService
+    private userService: UserService,
+    private pricingService: PricingService
   ) {}
 
   ngOnInit(): void {
@@ -68,7 +70,6 @@ export class SignupComponent implements OnInit {
 
   submit() {
     console.log("form submitted");
-    console.log(this.profileForm.get("name").value);
     var user: IUser = {
       id: generateId(),
       name: this.profileForm.get("name").value,
@@ -81,9 +82,13 @@ export class SignupComponent implements OnInit {
     if (this.from == "patners") {
       user.patnerType = this.typeForm.get("type").value;
     } else {
+      var cost = this.pricingService.getCost(
+        this.typeForm.get("time").value,
+        this.typeForm.get("type").value
+      );
       user.plan = this.typeForm.get("type").value;
-      user.cost = this.price;
-      user.time = this.period;
+      user.cost = cost.costINR;
+      user.time = this.typeForm.get("time").value;
     }
     this.userService.addUser(user);
   }

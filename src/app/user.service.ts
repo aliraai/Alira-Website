@@ -22,13 +22,21 @@ function generateId() {
   providedIn: "root",
 })
 export class UserService {
-  users: IUser[];
+  users: IUser[] = [];
   constructor() {}
-  addUser(user) {
-    // this.users.push(user);
+  addUser(user: IUser) {
+    this.users.push(user);
+
+    console.log(typeof user);
     console.log(
       "----------------------------Inside User Service --------------------"
     );
     console.log(user);
+    this.displayUsers();
+  }
+  displayUsers() {
+    this.users.forEach((ele) => {
+      console.log(ele.name);
+    });
   }
 }

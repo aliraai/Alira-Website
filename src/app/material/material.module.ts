@@ -19,6 +19,7 @@ import { MatChipsModule } from "@angular/material/chips";
 import { MaterialFileInputModule } from "ngx-material-file-input";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatStepperModule } from "@angular/material/stepper";
+import { MatDialogModule } from "@angular/material/dialog";
 
 // import { MatFileUploadModule } from 'angular-material-fileupload';
 const material = [
@@ -43,6 +44,7 @@ const material = [
   MatTabsModule,
   MatTooltipModule,
   MatStepperModule,
+  MatDialogModule,
 ];
 
 @NgModule({

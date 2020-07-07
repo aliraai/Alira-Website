@@ -8,7 +8,7 @@ import { Router } from "@angular/router";
   styleUrls: ["./patners.component.scss"],
 })
 export class PatnersComponent {
-  constructor(public router: Router) {}
+  constructor(private router: Router) {}
   navigateToSignUpPage(v) {
     console.log(v);
     this.router.navigateByUrl("/signup", {

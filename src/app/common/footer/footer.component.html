@@ -1,116 +1,124 @@
 <div class="container">
-    <div class="flex-container tab" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" >
-        <div fxFlex>
-            <div class="heading">Join Our Community Newsletter</div>
-            <small> Stay up to date with the latest news from the Rasa community</small>
-        </div>
-        <div fxFlex >
-            <form [formGroup]="mForm" fxLayoutAlign="end end    "
-            (ngSubmit)="addPost(mForm.value)"
-            fxLayout="row">
-            <div>
-                <mat-form-field appearance="outline">
-                <mat-label>Email</mat-label>
-                <input matInput placeholder="Email" formControlName="mail" class="email">
-                
-            </mat-form-field>
-            <button mat-flat-button  class="btn"
-                 disableRipple=true>Subscribe</button>
-            </div>
-
-                </form>
-        </div>
+  <div class="flex-container tab" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+    <div fxFlex>
+      <div class="heading">Join Our Community Newsletter</div>
+      <small> Stay up to date with the latest news from the Rasa community</small>
     </div>
+    <div fxFlex>
+      <form [formGroup]="mForm" fxLayoutAlign="end end    " (ngSubmit)="addPost(mForm.value)" fxLayout="row">
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="mail" class="email">
+
+          </mat-form-field>
+          <button mat-flat-button class="btn" disableRipple=true>Subscribe</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
 </div>
 <hr>
 <div class="container">
-    <div class="flex-container" fxLayout="row"  fxLayout.xs="column" fxLayout.sm="column">
-        <div fxFlex class="logo"  fxLayoutAlign="center start">
-            <img src="../../../assets/img/logo/alira_logo_black.png"/> <br>
-        </div>
-        <div fxFlex  class="why">
-            <span class="title">  Why Alira </span>
-            <mat-nav-list dense class="list">
-                <a mat-list-item> Overview </a>
-                <a mat-list-item> Features </a>
-                <a mat-list-item> Support </a>
-                <a mat-list-item> Docs </a>
-             </mat-nav-list>
-        </div>
-        <div fxFlex class="plans">
-           <span class="title"> Pricing </span>
-            <mat-nav-list dense class="list">
-                <a mat-list-item> Compare Plans </a>
-                <a mat-list-item> Enterprise </a>
-             </mat-nav-list>
-        </div>
-        <div fxFlex class="solutions">
-            <span class="title"> Solutions </span>
-            <mat-nav-list dense class="list">
-                <a mat-list-item> Enterprise Operations</a>
-                <a mat-list-item> Customer Service </a>
-                <a mat-list-item> Lead Generations </a>
-                <a mat-list-item> Financial Services </a>
-                <a mat-list-item> Healthcare </a>
-                <a mat-list-item> Voice </a>
-                <a mat-list-item> Case Study</a>
-             </mat-nav-list>
-        </div>
-        <div fxFlex class="industries">
-            <span class="title"> Industries </span>
-            <mat-nav-list dense class="list">
-                <a mat-list-item> Healthcare</a>
-                <a mat-list-item> Insurance </a>
-                <a mat-list-item> Banking </a>
-                <a mat-list-item> Telecom </a>
-                <a mat-list-item> Travel and Tourism </a>
-             </mat-nav-list>
-        </div>
-        <div fxFlex class="community">
-            <span class="title"> Community </span>
-            <mat-nav-list dense class="list">
-                <a mat-list-item> Join the Community </a>
-                <a mat-list-item> How to Contribute </a>
-                <a mat-list-item> Community Showcase </a>
-                <a mat-list-item> Forum </a>
-             </mat-nav-list>
-        </div>
-        <div fxFlex class="company">
-            <span class="title"> Company </span>
-            <mat-nav-list dense class="list">
-                <a mat-list-item> About Us </a>
-                <a mat-list-item> Career </a>
-                <a mat-list-item> Our Mission </a>
-                <a mat-list-item> How we make money </a>
-                <a mat-list-item> Research </a>
-                <a mat-list-item> Blog </a>
-                <a mat-list-item> Contact Us</a>
-             </mat-nav-list>
-        </div>
+  <div class="flex-container" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+    <div fxFlex class="logo" fxLayoutAlign="center start">
+      <img src="../../../assets/img/logo/alira_logo_black.png" /> <br>
     </div>
+    <div fxFlex class="why">
+      <span class="title"> Why Alira </span>
+      <mat-nav-list dense class="list">
+        <a mat-list-item> Overview </a>
+        <a mat-list-item> Features </a>
+        <a mat-list-item> Support </a>
+        <a mat-list-item> Docs </a>
+      </mat-nav-list>
+    </div>
+    <div fxFlex class="plans">
+      <span class="title"> Pricing </span>
+      <mat-nav-list dense class="list">
+        <a mat-list-item> Compare Plans </a>
+        <a mat-list-item> Enterprise </a>
+      </mat-nav-list>
+    </div>
+    <div fxFlex class="solutions">
+      <span class="title"> Solutions </span>
+      <mat-nav-list dense class="list">
+        <a mat-list-item> Enterprise Operations</a>
+        <a mat-list-item> Customer Service </a>
+        <a mat-list-item> Lead Generations </a>
+        <a mat-list-item> Financial Services </a>
+        <a mat-list-item> Healthcare </a>
+        <a mat-list-item> Voice </a>
+        <a mat-list-item> Case Study</a>
+      </mat-nav-list>
+    </div>
+    <div fxFlex class="industries">
+      <span class="title"> Industries </span>
+      <mat-nav-list dense class="list">
+        <a mat-list-item> Healthcare</a>
+        <a mat-list-item> Insurance </a>
+        <a mat-list-item> Banking </a>
+        <a mat-list-item> Telecom </a>
+        <a mat-list-item> Travel and Tourism </a>
+      </mat-nav-list>
+    </div>
+    <div fxFlex class="community">
+      <span class="title"> Community </span>
+      <mat-nav-list dense class="list">
+        <a mat-list-item> Join the Community </a>
+        <a mat-list-item> How to Contribute </a>
+        <a mat-list-item> Community Showcase </a>
+        <a mat-list-item> Forum </a>
+      </mat-nav-list>
+    </div>
+    <div fxFlex class="company">
+      <span class="title"> Company </span>
+      <mat-nav-list dense class="list">
+        <a mat-list-item> About Us </a>
+        <a mat-list-item> Career </a>
+        <a mat-list-item> Our Mission </a>
+        <a mat-list-item> How we make money </a>
+        <a mat-list-item> Research </a>
+        <a mat-list-item> Blog </a>
+        <a mat-list-item> Contact Us</a>
+      </mat-nav-list>
+    </div>
+  </div>
 </div>
 <hr>
-<div fxLayout="row" class="last-line"  fxLayout.xs="column" fxLayout.sm="column">
-    <div fxFlex fxLayoutAlign="start">
-        <a>
-            <a href="https://www.facebook.com/aliraassistant" class="social-media-icons" target="_blank">
-                <img src="../../../assets/img/social-media-icons/facebook.svg">
-            </a>
-        </a>
-        <a>
-            <a href="https://www.instagram.com/aliraassistant/" class="social-media-icons" target="_blank">
-                <img src="../../../assets/img/social-media-icons/instagram.svg">
-            </a>
-        </a>
-        <a>
-            <a href="https://twitter.com/aliraassistant" class="social-media-icons" target="_blank">
-                <img src="../../../assets/img/social-media-icons/twitter.svg">
-            </a>
-        </a>
+<div fxLayout="row" class="last-line" fxLayout.xs="column" fxLayout.sm="column">
+  <div fxFlex fxLayoutAlign="start">
+    <a>
+      <a href="https://www.facebook.com/aliraassistant" class="social-media-icons" target="_blank">
+        <img src="../../../assets/img/social-media-icons/facebook.svg">
+      </a>
+    </a>
+    <a>
+      <a href="https://www.instagram.com/aliraassistant/" class="social-media-icons" target="_blank">
+        <img src="../../../assets/img/social-media-icons/instagram.svg">
+      </a>
+    </a>
+    <a>
+      <a href="https://twitter.com/aliraassistant" class="social-media-icons" target="_blank">
+        <img src="../../../assets/img/social-media-icons/twitter.svg">
+      </a>
+    </a>
+  </div>
+  <div fxFlex fxLayoutAlign="end" class="copy-right" fxHide.lt-sm>
+    <!-- Copyright © 2020 Alira All Rights Reserved -->
+    <!-- <mat-icon>copyright</mat-icon> -->
+    © Alira - 2020 | All Rights Reserved | <a routerLink="/contact"> Imprint</a>
+  </div>
+  <div fxFlex fxShow.lt-sm fxHide.gt-md class="center">
+    <div>
+      © Alira - 2020
     </div>
-    <div fxFlex fxLayoutAlign="end" class="copy-right">
-        <!-- Copyright © 2020 Alira All Rights Reserved -->
-        <!-- <mat-icon>copyright</mat-icon> -->
-        © Alira - 2020 | All Rights Reserved | <a routerLink="/contact"> Imprint</a>
+    <div>
+      All Rights Reserved
     </div>
+    <div>
+      <a routerLink="/contact"> Imprint</a>
+    </div>
+  </div>
 </div>

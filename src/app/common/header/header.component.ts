@@ -14,7 +14,7 @@ import { Router } from "@angular/router";
 })
 export class HeaderComponent implements OnInit {
   scrolling: boolean;
-  path = "../../../assets/img/logo/alira_logo.png";
+  path = "../../../assets/img/logo/logo_transparent.png";
   constructor(public router: Router) {
     this.scrolling = false;
   }
@@ -27,10 +27,10 @@ export class HeaderComponent implements OnInit {
   getClass() {
     if (this.pos > 0) {
       this.scrolling = true;
-      this.path = "../../../assets/img/logo/alira_logo_black.png";
+      this.path = "../../../assets/img/logo/logo_colored.png";
     } else {
       this.scrolling = false;
-      this.path = "../../../assets/img/logo/alira_logo.png";
+      this.path = "../../../assets/img/logo/logo_transparent.png";
     }
     return { hdr: !this.scrolling, hdrScroll: this.scrolling };
   }

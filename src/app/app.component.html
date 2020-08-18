@@ -1,4 +1,6 @@
 <div fxLayout="column">
+  <app-chatbubble (showHideChatWindow)="isChat=$event" class="chatbubble"></app-chatbubble>
+  <app-chatbot *ngIf="isChat" class="chatbot" (closeChatWindow)="isChat=$event"> </app-chatbot>
   <app-header fxFlex></app-header>
   <app-footer fxFlex></app-footer>
 </div>

@@ -1,11 +1,13 @@
 /*Navigation bar css mat-toolbar*/
 /* start */
-.navbar{
+.navbar {
   position: fixed;
-  position: -webkit-fixed; /* For macOS/iOS Safari */
+  position: -webkit-fixed;
+  /* For macOS/iOS Safari */
   // top: 0; /* Sets the sticky toolbar to be on top */
-  z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
-  justify-content: space-between; 
+  z-index: 1000;
+  /* Ensure that your app's content doesn't overlap the toolbar */
+  justify-content: space-between;
   // z-index: 5;  
   background-color: white;
 }
@@ -16,45 +18,51 @@
   // background-color: #AA00FF;
   background-color: #13f;
 
-  color:#fff;
+  color: #fff;
 }
 
 .hdrScroll {
   background-color: #fff;
-  
+
   //https://medium.com/@ladyleet/adding-box-shadow-z-depth-to-angular-material-2-components-6bd0de303dcb
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),  
-              0 1px 5px 0 rgba(0, 0, 0, 0.12), 
-              0 3px 1px -2px rgba(0, 0, 0, 0.2);  
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
 
 }
 
 
 
 /*logo*/
-.logo{
-  width: 10%;
-  margin-left:2em;
+.logo {
+  width: 5%;
+  margin-left: 2em;
   // border: solid 1px white;
 }
 
 /*Navigation Links*/
-.buttons a,button{
+.buttons a,
+button {
   font-size: large;
 }
+
 /*Get Started Button*/
-.btn{
+.btn {
   border-radius: 25px;
-  background-color:#13f;
-  color:white;
+  background-color: #13f;
+  color: white;
 }
 
 
 //mobile
-@media(max-width:700px){
-  .logo{
-    width:30%;
-    margin-left:0em;
+@media(max-width:700px) {
+  .logo {
+    width: 25%;
+    margin-left: 0em;
+  }
+
+  .container-content {
+    margin-top: 3.2em;
   }
 }
 

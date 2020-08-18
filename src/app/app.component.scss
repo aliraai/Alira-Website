@@ -1,15 +1,34 @@
 @font-face {
-    font-family: 'futuraLight';
-    src: url("../assets/fonts/FuturaPTLight.otf");
+  font-family: 'futuraLight';
+  src: url("../assets/fonts/FuturaPTLight.otf");
 }
-@font-face{
-    font-family: 'Graphik';
-    src: url("../assets/fonts/Graphik/Graphik-Regular.ttf");
+
+@font-face {
+  font-family: 'Graphik';
+  src: url("../assets/fonts/Graphik/Graphik-Regular.ttf");
 }
-@font-face{
-    font-family: 'GraphikBold';
-    src: url("../assets/fonts/Graphik/Graphik-Bold.ttf");
+
+@font-face {
+  font-family: 'GraphikBold';
+  src: url("../assets/fonts/Graphik/Graphik-Bold.ttf");
 }
+
 // mat-grid-tile{
 //     border:1px solid red;
 // }
+
+.chatbubble {
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: 99999999999999;
+  padding: 2em;
+}
+
+.chatbot {
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: 99999999999999;
+  padding: 5em;
+}

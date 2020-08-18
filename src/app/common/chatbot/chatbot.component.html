@@ -1,0 +1,28 @@
+<mat-card class="example-card">
+  <mat-card-header class="header">
+    <mat-icon class="close-icon" (click)="clicked()">close</mat-icon>
+  </mat-card-header>
+  <mat-card-content>
+
+  </mat-card-content>
+  <mat-card-footer style="margin-top:200px">
+    <mat-divider></mat-divider>
+    <form>
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Enter your message" cdkTextareaAutosize #message
+          (keydown.enter)="addMessage(message)"></textarea>
+      </mat-form-field>
+      <button mat-mini-fab class="send-btn" (click)="addMessage(message)">
+        <mat-icon style="color:#fff">send</mat-icon>
+      </button>
+    </form>
+    <div class="bottom">
+      <div class="icons">
+        <mat-icon> attach_file</mat-icon>
+        <mat-icon (click)="searchicon()">search
+        </mat-icon>
+      </div>
+
+    </div>
+  </mat-card-footer>
+</mat-card>

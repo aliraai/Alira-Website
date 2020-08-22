@@ -29,6 +29,7 @@ import { PlanTableComponent } from "./pricing/plan-table/plan-table.component";
 import { AboutUsComponent } from "./about-us/about-us.component";
 import { CareersComponent } from "./careers/careers.component";
 import { AuthenticationModule } from "./authentication/authentication.module";
+import { ChatModule } from "./chat/chat.module";
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { AuthenticationModule } from "./authentication/authentication.module";
     FormsModule,
     ReactiveFormsModule,
     AuthenticationModule,
+    ChatModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

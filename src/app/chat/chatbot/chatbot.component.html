@@ -2,10 +2,16 @@
   <mat-card-header class="header">
     <mat-icon class="close-icon" (click)="clicked()">close</mat-icon>
   </mat-card-header>
-  <mat-card-content>
-
+  <mat-card-content class="conversation">
+    <!-- <div *ngFor="let message of messages$ | async; trackBy:trackById" style="margin-top:1em">
+      <div class="bubble">
+        <app-chatmessage [message]='message'></app-chatmessage>
+        <br>
+      </div>
+    </div> -->
+    <app-chatmessage></app-chatmessage>
   </mat-card-content>
-  <mat-card-footer style="margin-top:200px">
+  <mat-card-footer>
     <mat-divider></mat-divider>
     <form>
       <mat-form-field class="example-full-width">
@@ -19,10 +25,16 @@
     <div class="bottom">
       <div class="icons">
         <mat-icon> attach_file</mat-icon>
-        <mat-icon (click)="searchicon()">search
-        </mat-icon>
+        <!-- <mat-icon (click)="searchicon()">search
+          </mat-icon> -->
+        <!-- <mat-form-field appearance="outline" style="float:right;margin-right:1em">
+            <mat-label>
+              <mat-icon style="font-size:24px">search
+              </mat-icon>
+            </mat-label>
+            <input matInput (keydown.enter)="searchicon()" [(ngModel)]="search">
+          </mat-form-field> -->
       </div>
-
     </div>
   </mat-card-footer>
 </mat-card>

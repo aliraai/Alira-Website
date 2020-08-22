@@ -6,33 +6,22 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { FooterComponent } from "../footer/footer.component";
 import { SocialBandComponent } from "../social-band/social-band.component";
 import { ReactiveFormsModule } from "@angular/forms";
-import { ChatbubbleComponent } from "../chatbubble/chatbubble.component";
-import { ChatbotComponent } from "../chatbot/chatbot.component";
+// import { ChatbubbleComponent } from "../chatbubble/chatbubble.component";
+// import { ChatbotComponent } from "../chatbot/chatbot.component";
 import { FormsModule } from "@angular/forms";
-// import { CommonModule } from "@angular/common";
+// import { ChatmessageComponent } from "../chatbot/chatmessage/chatmessage.component";
+import { CommonModule } from "@angular/common";
 
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    FooterComponent,
-    SocialBandComponent,
-    ChatbubbleComponent,
-    ChatbotComponent,
-  ],
+  declarations: [HeaderComponent, FooterComponent, SocialBandComponent],
   imports: [
-    // CommonModule,
+    CommonModule,
     MaterialModule,
     RouterModule,
     FlexLayoutModule,
     ReactiveFormsModule,
     FormsModule,
   ],
-  exports: [
-    HeaderComponent,
-    FooterComponent,
-    SocialBandComponent,
-    ChatbubbleComponent,
-    ChatbotComponent,
-  ],
+  exports: [HeaderComponent, FooterComponent, SocialBandComponent],
 })
 export class SharedModule {}

@@ -13,8 +13,8 @@ export class ChatbubbleComponent implements OnInit {
   ngOnInit(): void {}
 
   clicked() {
-    // alert("clicked");
     this.isChat = !this.isChat;
+    console.log("clicked ", this.isChat);
     this.showHideChatWindow.emit(this.isChat);
   }
 }

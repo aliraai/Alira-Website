@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { IMessage, MessageService } from "src/app/message.service";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-chatbot",
@@ -8,8 +10,17 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 export class ChatbotComponent implements OnInit {
   @Output() closeChatWindow = new EventEmitter();
   toSearch = true;
-  constructor() {}
+  search = "";
+  messages$: Observable<IMessage[]> = this.messageService.message$;
 
+  constructor(private messageService: MessageService) {
+    this.messages$.forEach((ele) => {
+      console.log(ele);
+    });
+  }
+  trackById(index, item) {
+    return item.id;
+  }
   ngOnInit(): void {}
 
   clicked() {
@@ -20,6 +31,7 @@ export class ChatbotComponent implements OnInit {
     message.value = "";
   }
   searchicon() {
-    this.toSearch = !this.toSearch;
+    console.log("searching...", this.search);
+    this.search = "";
   }
 }

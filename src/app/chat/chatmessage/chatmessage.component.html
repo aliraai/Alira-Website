@@ -1,6 +1,6 @@
 <!-- [ngClass]="{'Alira':message.userName === 'Alira', 'self': message.userName !== 'Alira'} -->
 
-<div *ngFor="let message of messages$ | async; trackBy:trackById">
+<div *ngFor="let message of messages$ | async; trackBy: trackById">
   <!-- <div class="bubble">
     <img src="../../../assets/img/chatbot/avatar.png" alt=""
       [ngClass]="{'chat-icon':message.userName === 'Alira', 'chat-icon-answer':message.userName === 'guest'}">
@@ -8,16 +8,24 @@
       {{message.message}}
     </div>
   </div> -->
-  <div *ngIf="message.userName==='Alira'" class="bubble">
-    <img class="chat-icon" src="../../../assets/img/chatbot/avatar.png" alt="">
+  <div *ngIf="message.userName === 'Alira'" class="bubble">
+    <img
+      class="chat-icon"
+      src="../../../assets/img/chatbot/logo_colored.png"
+      alt=""
+    />
     <div class="question">
-      {{message.message}}
+      {{ message.message }}
     </div>
   </div>
-  <div *ngIf="message.userName==='guest'" class="bubble1">
-    <img class="chat-icon-answer" src="../../../assets/img/chatbot/avatar.png" alt="">
+  <div *ngIf="message.userName === 'guest'" class="bubble1">
+    <img
+      class="chat-icon-answer"
+      src="../../../assets/img/chatbot/avatar.png"
+      alt=""
+    />
     <div class="answer">
-      {{message.message}}
+      {{ message.message }}
     </div>
   </div>
 </div>

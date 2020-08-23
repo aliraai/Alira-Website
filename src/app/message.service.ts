@@ -38,6 +38,16 @@ export class MessageService {
       message: "Webinar",
       userName: "guest",
     },
+    {
+      id: generateId(),
+      message: "How did you hear about us?",
+      userName: "Alira",
+    },
+    {
+      id: generateId(),
+      message: "Webinar",
+      userName: "guest",
+    },
   ];
   message$ = new BehaviorSubject<IMessage[]>(this.messages);
   constructor() {}

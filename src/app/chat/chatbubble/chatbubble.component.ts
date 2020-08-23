@@ -6,15 +6,14 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
   styleUrls: ["./chatbubble.component.scss"],
 })
 export class ChatbubbleComponent implements OnInit {
-  @Output() showHideChatWindow = new EventEmitter();
-  isChat = false;
+  @Output() showChatWindow = new EventEmitter();
+
   constructor() {}
 
   ngOnInit(): void {}
 
   clicked() {
-    this.isChat = !this.isChat;
-    console.log("clicked ", this.isChat);
-    this.showHideChatWindow.emit(this.isChat);
+    console.log("inside clicked of chatbubble");
+    this.showChatWindow.emit(true);
   }
 }

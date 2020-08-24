@@ -19,34 +19,18 @@ export class MessageService {
   messages: IMessage[] = [
     {
       id: generateId(),
-      message:
-        "Hello, Thanks for connecting with us over messenger. How can I help you?",
+      message: "Hello, I'm Alira!",
       userName: "Alira",
     },
     {
       id: generateId(),
-      message: "Take me there",
-      userName: "guest",
-    },
-    {
-      id: generateId(),
-      message: "How did you hear about us?",
+      message: "Alira is customizable bot for all your business needs.",
       userName: "Alira",
     },
     {
       id: generateId(),
-      message: "Webinar",
-      userName: "guest",
-    },
-    {
-      id: generateId(),
-      message: "How did you hear about us?",
+      message: "What is your name?",
       userName: "Alira",
-    },
-    {
-      id: generateId(),
-      message: "Webinar",
-      userName: "guest",
     },
   ];
   message$ = new BehaviorSubject<IMessage[]>(this.messages);
@@ -61,14 +45,31 @@ export class MessageService {
 
   sendReply(message: IMessage) {
     var reply = "";
+    var flag = 0;
     console.log("message.message", message.message);
-    switch (message.message) {
+    var choice = message.message + "";
+    if (flag == 1) {
+      choice = "phone";
+    }
+    if (choice == "1" || choice == "2" || choice == "3") {
+      console.log(typeof choice);
+    }
+    switch (choice) {
       case "hi":
         console.log("...");
         reply = "how can i help you?";
         break;
+      case "phone":
+        reply = "Enter your phone number";
+      case "1":
+      case "2":
+      case "3":
+        reply = "Nice Choice, Do you have specific requirement?";
+        flag = 1;
+        break;
       default:
-        reply = "I cannot do that at the moment";
+        reply =
+          "Which type of chat-bot do you need?\nKindly enter 1 - Lead Generation Chatbot\n 2 - Educational Chatbot \n 3 - AI Chatbot";
         break;
     }
     var msg: IMessage = {

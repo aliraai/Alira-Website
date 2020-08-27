@@ -12,7 +12,8 @@
     <div class="send" (click)="addMessage(message)">
       <mat-icon>send</mat-icon>
     </div>
-    <textarea id="chatSend" name="chat_message" placeholder="Send a message" class="chat_field chat_message" #message
-      (keydown.enter)="addMessage(message)"></textarea>
+    <textarea matLinkPreview id="chatSend" name="chat_message" placeholder="Send a message"
+      class="chat_field chat_message" #message (keydown.enter)="addMessage(message)"></textarea>
+    <mat-link-preview-container></mat-link-preview-container>
   </mat-card-footer>
 </mat-card>

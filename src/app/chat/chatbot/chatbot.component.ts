@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 import { IMessage, MessageService } from "src/app/message.service";
 import { Observable } from "rxjs";
+import { MatLinkPreviewService } from "@angular-material-extensions/link-preview";
 
 function generateId() {
   return Math.floor(Math.random() * 1000);
@@ -17,7 +18,10 @@ export class ChatbotComponent implements OnInit {
   search = "";
   messages$: Observable<IMessage[]> = this.messageService.message$;
 
-  constructor(private messageService: MessageService) {
+  constructor(
+    private messageService: MessageService,
+    private matLinkPreviewService: MatLinkPreviewService
+  ) {
     this.messages$.forEach((ele) => {
       console.log(ele);
     });

@@ -30,6 +30,7 @@ import { AboutUsComponent } from "./about-us/about-us.component";
 import { CareersComponent } from "./careers/careers.component";
 import { AuthenticationModule } from "./authentication/authentication.module";
 import { ChatModule } from "./chat/chat.module";
+import { MatLinkPreviewModule } from "@angular-material-extensions/link-preview";
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { ChatModule } from "./chat/chat.module";
     ReactiveFormsModule,
     AuthenticationModule,
     ChatModule,
+    MatLinkPreviewModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

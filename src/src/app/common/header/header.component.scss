@@ -13,6 +13,7 @@
     justify-content: space-between;
     // z-index: 5;  
     background-color: white;
+    height: 50px;
 }
 
 .hdr {
@@ -33,7 +34,7 @@
 
 .logo {
     width: 8%;
-    margin-left: 2em;
+    margin-left: 1em;
     // border: solid 1px white;
 }
 
@@ -42,7 +43,11 @@
 
 .buttons a,
 button {
-    font-size: large;
+    font-size: x-small;
+}
+
+.font {
+    font-size: 14px;
 }
 
 
@@ -50,8 +55,10 @@ button {
 
 .btn {
     border-radius: 25px;
-    background-color: #18083B;
-    color: white;
+    background-color: #ffffff;
+    color: #0A66C2;
+    border-color: #0A66C2;
+    font-weight: normal;
 }
 
 //mobile

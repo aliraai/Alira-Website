@@ -6,37 +6,37 @@
     <!--Navigation Links-->
     <div fxShow="true" fxHide.lt-md="true" class="buttons">
         <!--Home-->
-        <a routerLink="/" mat-button disableRipple=true>Home</a>
+        <a routerLink="/" mat-button disableRipple=true><span class="font">Home</span></a>
         <!--Pricing-->
-        <a routerLink="/pricing" mat-button disableRipple=true>Pricing</a>
+        <a routerLink="/pricing" mat-button disableRipple=true><span class="font">Pricing</span></a>
         <!--Company-->
         <mat-menu #companyMenu="matMenu">
-            <a routerLink="/patners" mat-menu-item disableRipple=true>Patners</a>
-            <a routerLink="/about-us" mat-menu-item disableRipple=true>About Us</a>
-            <a routerLink="/contact" mat-menu-item disableRipple=true>Contact Us</a>
-            <a routerLink="/events" mat-menu-item disableRipple=true>Events</a>
-            <a routerLink="/careers" mat-menu-item disableRipple=true>Careers</a>
+            <a routerLink="/patners" mat-menu-item disableRipple=true><span class="font">Patners</span></a>
+            <a routerLink="/about-us" mat-menu-item disableRipple=true><span class="font">About Us</span></a>
+            <a routerLink="/contact" mat-menu-item disableRipple=true><span class="font">Contact Us</span></a>
+            <a routerLink="/events" mat-menu-item disableRipple=true><span class="font">Events</span></a>
+            <a routerLink="/careers" mat-menu-item disableRipple=true><span class="font">Careers</span></a>
         </mat-menu>
-        <button mat-button [matMenuTriggerFor]="companyMenu" disableRipple=true>
-      Company
+        <button mat-button [matMenuTriggerFor]="companyMenu" disableRipple=true><span class="font">Company</span>
+      
       <mat-icon>keyboard_arrow_down</mat-icon>
     </button>
         <!--Resources-->
         <mat-menu #resourcesMenu="matMenu">
-            <a routerLink="/blog" mat-menu-item disableRipple=true>Blog</a>
-            <a routerLink="/articles" mat-menu-item disableRipple=true>Articles</a>
-            <a routerLink="/faq" mat-menu-item disableRipple=true>FAQ</a>
-            <a routerLink="/help-desk" mat-menu-item disableRipple=true>Help Desk</a>
+            <a routerLink="/blog" mat-menu-item disableRipple=true><span class="font">Blog</span></a>
+            <a routerLink="/articles" mat-menu-item disableRipple=true><span class="font">Articles</span></a>
+            <a routerLink="/faq" mat-menu-item disableRipple=true><span class="font">FAQ</span></a>
+            <a routerLink="/help-desk" mat-menu-item disableRipple=true><span class="font">Help Desk</span></a>
         </mat-menu>
-        <button mat-button [matMenuTriggerFor]="resourcesMenu" disableRipple=true>
-      Resources
+        <button mat-button [matMenuTriggerFor]="resourcesMenu" disableRipple=true><span class="font">Resources</span>
+      
       <mat-icon>keyboard_arrow_down</mat-icon>
     </button>
     </div>
 
     <div fxShow="true" fxHide.lt-md="true" class="buttons">
-        <button (click)="navigateToSignUpPage()" mat-flat-button class="btn" disableRipple=true>Get Started</button>
-        <button mat-button routerLink="/signin" disableRipple=true>Login</button>
+        <button mat-stroked-button color="primary" class="btn" (click)="navigateToSignUpPage()" mat-flat-button disableRipple=true><span class="font">Get Started</span></button>
+        <button mat-button routerLink="/signin" disableRipple=true><span class="font">Sign in</span></button>
     </div>
 
     <div fxShow="true" fxHide.gt-sm="true">

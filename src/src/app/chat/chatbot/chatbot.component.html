@@ -1,0 +1,19 @@
+<mat-card class="example-card">
+  <mat-card-header class="header">
+    <mat-icon class="close-icon" (click)="clicked()">close</mat-icon>
+  </mat-card-header>
+  <mat-card-content class="conversation">
+    <app-chatmessage></app-chatmessage>
+  </mat-card-content>
+  <mat-card-footer class="footer">
+    <div class="attachment">
+      <mat-icon>attach_file</mat-icon>
+    </div>
+    <div class="send" (click)="addMessage(message)">
+      <mat-icon>send</mat-icon>
+    </div>
+    <textarea matLinkPreview id="chatSend" name="chat_message" placeholder="Send a message"
+      class="chat_field chat_message" #message (keydown.enter)="addMessage(message)"></textarea>
+    <mat-link-preview-container></mat-link-preview-container>
+  </mat-card-footer>
+</mat-card>

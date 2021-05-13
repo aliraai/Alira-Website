@@ -32,6 +32,8 @@ import { AuthenticationModule } from "./authentication/authentication.module";
 import { ChatModule } from "./chat/chat.module";
 import { MatLinkPreviewModule } from "@angular-material-extensions/link-preview";
 
+import { ChatfuelSectionComponent } from './home/chatfuel-section/chatfuel-section.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +56,8 @@ import { MatLinkPreviewModule } from "@angular-material-extensions/link-preview"
     PlanTableComponent,
     AboutUsComponent,
     CareersComponent,
+    
+    ChatfuelSectionComponent,
   ],
   imports: [
     BrowserModule,

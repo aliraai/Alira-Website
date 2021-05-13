@@ -1,0 +1,27 @@
+.band{
+    margin-bottom:2em;
+    position: relative;
+    --section-background-color: #13f;
+    background-color: #13f;
+    color: white;
+    --alternative-heading-color: white;
+    --primary-color: white;
+    --secondary-color: #13f;
+    --card-color--secondary: #13f;
+    text-align: center;
+    padding: 7rem 1rem;
+}
+.title{
+    margin: 0 0 20px;
+    background-color: #13f;
+  }
+.getStarted{
+    background-color: #fff;
+    color:#000;
+    border-radius:1em;
+}
+.features{
+    border-color: #fff;
+    margin-left:2em;
+    border-radius:1em;
+}

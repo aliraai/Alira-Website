@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="flex-container tab" fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+        <div fxFlex>
+            <div class="heading">Join Our Community Newsletter</div>
+            <small> Stay up to date with the latest news from the Alira community</small>
+        </div>
+        <div fxFlex>
+            <form [formGroup]="mForm" fxLayoutAlign="end end    " (ngSubmit)="addPost(mForm.value)" fxLayout="row">
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email" formControlName="mail" class="email">
+
+                    </mat-form-field>
+                    <button mat-flat-button class="btn" disableRipple=true>Subscribe</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

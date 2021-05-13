@@ -1,0 +1,39 @@
+.bubble {
+  display: flex;
+  margin-top: 1em;
+}
+
+.bubble1 {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 1em;
+}
+
+.question {
+  border: 1px solid black;
+  border-radius: 5px 5px 5px 35px;
+  padding: 1em;
+  order: 2;
+  margin-left: 1em;
+}
+
+.chat-icon {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  order: 1;
+}
+
+.answer {
+  border: 1px solid black;
+  border-radius: 5px 5px 35px 5px;
+  padding: 1em;
+  margin-right: 1em;
+}
+
+.chat-icon-answer {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}

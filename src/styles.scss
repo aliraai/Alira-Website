@@ -1,27 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
 
-
-
-html, body { height: 100%; }
-body { margin: 0;}
-*{font-family: Graphik,Roboto, "Helvetica Neue", sans-serif;
-    }
-
-address{
-    font-style: normal;
-    padding-left:5%;
+html,
+body {
+    height: 100%;
 }
 
+body {
+    margin: 0;
+}
 
-.mat-display-2,.mat-display-1,.mat-h4{
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+address {
+    font-style: normal;
+    padding-left: 5%;
+}
+
+.mat-display-2,
+.mat-display-1,
+.mat-h4 {
     // font-family:Roboto, sans-serif;
-    font-family: GraphikBold,Roboto,futuraLight, "Helvetica Neue", sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: white;
 }
-.mat-button-focus-overlay .mat-item-list-focus-overlay{ 
-    background-color: transparent!important; 
-    }
-.mat-drawer-container{
+
+.mat-button-focus-overlay .mat-item-list-focus-overlay {
+    background-color: transparent!important;
+}
+
+.mat-drawer-container {
     // background-color: #64b;
     // background-color: #AA00FF;
     // background-color: #291B47;

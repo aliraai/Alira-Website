@@ -1,0 +1,41 @@
+<div class="faq">
+  <div class="mat-display-1 center">
+    Help Desk
+  </div>
+</div>
+<div fxLayout="row">
+  <div fxFlex>
+    <div style="float:left;margin-left:10em;margin-bottom: 5em;">
+      <mat-expansion-panel style="width: 25em;box-shadow: none;" *ngFor="let header of headers">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{header}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div *ngFor="let post of helpDesk$ | async;trackBy:trackById">
+          <div *ngIf='header===post.header'>
+            <button mat-button [routerLink]="['/help-desk', post.id, post.question]">
+              {{post.question}} </button>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </div>
+  </div>
+  <div fxFlex style="margin-right:5em; width:50%;float:right;">
+    <div *ngIf='flag; else el'>
+      {{helpDesk.intro}}
+      <div *ngFor="let soln of helpDesk.solution;let i = index" class="solution">
+        <!-- <span class="icon"> {{i}}</span> -->
+        <mat-icon aria-hidden="false" aria-label="Example home icon">keyboard_arrow_right</mat-icon>
+
+        {{soln}}
+      </div>
+      <!-- {{helpDesk.solution}} -->
+    </div>
+    <ng-template #el>
+      Select from Left your query
+    </ng-template>
+  </div>
+</div>
+<div style="padding: 2em;"></div>
+<!-- <app-social-band></app-social-band> -->

@@ -1,0 +1,30 @@
+<div class="faq">
+    <div class="mat-display-1 center">
+        Frequently Asked Questions
+    </div>
+    <div class="panel">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="1em">
+            <div fxFlex>
+                <mat-accordion>
+                    <mat-expansion-panel *ngFor="let content of faq1">
+                      <mat-expansion-panel-header class="questions">
+                        {{content.question}}
+                      </mat-expansion-panel-header>
+                      {{content.answer}}
+                    </mat-expansion-panel>
+                  </mat-accordion>
+            </div>
+            <div fxFlex>
+                <mat-accordion>
+                    <mat-expansion-panel *ngFor="let content of faq2">
+                      <mat-expansion-panel-header class="questions">
+                        {{content.question}}
+                      </mat-expansion-panel-header>
+                      {{content.answer}}
+                    </mat-expansion-panel>
+                  </mat-accordion>
+            </div>
+        </div>
+    </div>
+</div>
+<app-social-band></app-social-band>

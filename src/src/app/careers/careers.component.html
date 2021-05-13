@@ -1,0 +1,31 @@
+<div class="careers">
+  <div class="mat-display-1 center">
+    Work With Us
+  </div>
+  <mat-divider style="width: 70%;margin-left:10em;margin-top:-2em"></mat-divider>
+  <div fxLayout="column">
+    <div fxFlex fxFlexAlign="center">
+      <mat-form-field>
+        <mat-label>Department</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let job of department" [value]="job">
+            {{job}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div fxFlex style="padding:0em 8em">
+      <mat-grid-list cols="3" rowHeight="2:1">
+        <mat-grid-tile *ngFor="let job of jobs$ | async;trackBy:trackById">
+          <a [routerLink]="['/job-post', job.id]">
+            <mat-card class="job-card" *ngIf="job.active">
+              <mat-card-subtitle> {{job.department}} </mat-card-subtitle>
+              <mat-card-title> {{job.designation}} </mat-card-title>
+              <mat-card-footer> {{job.opening}} openings</mat-card-footer>
+            </mat-card>
+          </a>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+.mat-display-1{
+    text-align: center;
+}   
+.container{
+    padding:1em 8em;
+}
+.box{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    max-width: 520px;
+    // overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(225, 232, 237);
+    border-radius: 5px;
+    padding-bottom: 1em;
+    // background-color: #ceeae6;
+    background-color: #fff;
+}
+.mat-card-subtitle:not(:first-child){
+    margin-left:2em;
+    margin-top: -30px;
+}
+.social-icon{
+    float: right;
+}
+.content{
+    padding:2em;
+    text-align: justify;
+    line-height: 1.3em;
+}
+.image img{ 
+    width: 70%;
+    margin-left: 4.5em;
+    border-radius: 5px;
+}
+
+.footer a{
+    font-size:12px;
+    font-weight: bolder;
+    color:#57f;
+}
+.social{
+    background-color: #fff;
+}

@@ -1,0 +1,49 @@
+.product{
+    background-color: #fff;
+}
+.mat-display-1,p{
+    text-align: center;   
+    margin-bottom: 25px;
+}
+p{
+    opacity: 60%;
+}
+.container{
+    padding:1em 8em;
+}
+mat-card-subtitle, .footer{
+    color:#64b;
+    text-transform: uppercase ;
+}
+.footer{
+    padding: 1em 3em;
+    font-size: smaller;
+    font-weight: bold;
+}
+.inside{
+    padding: 1em 0.5em;
+}
+.title{
+    font-weight: bolder;
+    font-size:1.5em;
+    color:#000;
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 9px 22px 0px;
+    background-color: white;
+    font-size: 0.875rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    // overflow: hidden;
+    transition: transform 0.2s ease 0s, box-shadow 0.2s ease 0s;
+}
+.btn{
+    text-align:center;
+}
+.btn button{
+    background-color: #13f;
+    color:#fff;
+    border-radius:0.5em;
+}

@@ -1,0 +1,116 @@
+.product{
+    background-color:DodgerBlue;
+
+    
+}
+
+.mat-display-1,pg.image{
+    text-align: center;   
+    
+    margin-bottom: 25px ;
+   
+    
+   padding-top:25px;
+   
+   
+   
+    
+}
+.mat-card-image{
+width:600px;
+margin-bottom:-17px;
+
+
+}
+
+p{
+    opacity: 60%;
+}
+.container{
+    padding:1em 8em;
+}
+mat-card-title{
+    text-align:left;
+    margin-left:100px;
+    margin-top:100px;
+}
+mat-card-content{
+    text-align:left;
+ margin-left:100px;
+}
+mat-card-subtitle{
+    text-align: right; 
+    color:#64db;
+    text-transform: uppercase ;
+    
+    
+    margin-left:100px;
+    padding:50px;
+   
+  
+     
+
+}
+
+.title, footer{
+
+}
+.footer{
+    padding: 1em 8em;
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.title{
+    font-weight: bolder;
+    font-size:1.5em;
+    color:#000;
+    text-align:center;
+}
+
+
+.body {
+    text-align:center;
+    margin:center;
+    padding-right:25px;
+    display: flex;
+    flex-direction: row ;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 9px 22px 0px;
+    background-color:  dogerblue;
+    font-size: 0.875rem;
+    cursor: pointer;
+    
+   
+    
+    
+    
+    
+    // overflow: hidden;
+    transition: transform 0.2s ease 0s, box-shadow 0.2s ease 0s;
+}
+.btn{
+    text-align:center;
+    top-margin:60px;
+     margin-left:130px;
+
+
+}
+.img src{
+    text-align:right;
+}
+.title{
+    text-align:left;
+    margin-top:20px;
+    margin-bottom:30px;
+     margin-left:100px;
+}
+
+.btn button{
+    background-color: #13f;
+    color:#fff;
+    border-radius:0.5em;
+    text-align:right;
+    margin-bottom:30px;
+    margin-right:490px;
+   
+}

@@ -1,0 +1,55 @@
+<div fxLayout="column" style="background-color: white;">
+  <div fxFlex="1 1 auto" class="flex-container" style="text-align: center;">
+    <div class="mat-display-1" style="margin-top:3em">Get In Touch!
+    </div>
+    <div class="title">
+      We'd love to hear from you!
+      Whether you have a question about our features, trials, pricing or need a demo
+      the Alira team is ready to answer all of them.
+    </div>
+  </div>
+  <div fxFlex="1 1 auto">
+    <app-form></app-form>
+  </div>
+  <div fxFlex="1 1 auto">
+    <div class="card">
+      <button mat-fab style="margin-left: 24em;margin-top:-3em">
+        <mat-icon>map</mat-icon>
+      </button>
+      <div style="text-align: center;">
+        <p>Address</p>
+        <p *ngFor=" let item of address;">
+          {{item}}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="1 1 auto">
+    <div fxLayout="row" style="width:50%;margin-left:22.5em">
+      <div fxFlex>
+        <p>If you would like to get a demo or know more about our products, please write to</p>
+        <p>
+          <mat-icon>alternate_email</mat-icon> <a href="mailto:{{email}}"> {{email}}</a>
+        </p>
+        <p>Or give a call</p>
+        <p>
+          <mat-icon>call</mat-icon> <a href="tel:{{phone}}"> {{phone}}</a>
+        </p>
+      </div>
+      <div fxFlex style="border: 1em;">
+        <p>Alternatively, you can find us on</p>
+        <img class="icons" src="../../assets/img/social-media-icons/facebook.svg">
+        <img class="icons" src="../../assets/img/social-media-icons/instagram.svg">
+        <img class="icons" src="../../assets/img/social-media-icons/twitter.svg">
+      </div>
+    </div>
+  </div>
+</div>
+<app-social-band></app-social-band>
+<!-- MAP
+  <div fxFlex id="map-container-google-1" 
+                class="flex-container z-depth-1-half map-container" >
+                <iframe width="100%" height="100%" id="gmap_canvas" 
+                        src="https://maps.google.com/maps?q=Alira%20pune&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+ -->
